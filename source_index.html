@@ -1,0 +1,1247 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Developer Portfolio Hero Section</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;display=swap"
+      rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              primary: '#2563eb', // blue-600
+              'background-light': '#f3f4f6', // gray-100
+              'background-dark': '#0d1117', // a dark slate/navy color
+            },
+            fontFamily: {
+              display: ['Poppins', 'sans-serif'],
+            },
+            borderRadius: {
+              DEFAULT: '0.5rem', // 8px
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .icon-react {
+        width: 1.25em;
+        height: 1.25em;
+        vertical-align: -0.25em;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-white
+ dark:bg-black font-display text-gray-800 dark:text-gray-300 antialiased">
+    <div class="min-h-screen px-4 sm:px-6 lg:px-8 flex flex-col">
+      <header class="py-6">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+          <div class="flex items-center space-x-3">
+            <div class="bg-primary p-2 rounded-lg">
+              <svg
+                class="h-6 w-6 text-white"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24">
+                <path
+                  d="M13 10V3L4 14h7v7l9-11h-7z"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"></path>
+              </svg>
+            </div>
+            <span
+              class="text-xl font-bold text-gray-900 dark:text-white">Eistiak
+              Ahmed
+
+            </div>
+            <nav class="hidden md:flex items-center space-x-8">
+              <a
+                class="text-sm font-medium hover:text-primary dark:hover:text-primary transition-colors"
+                href="#">About</a>
+              <a
+                class="text-sm font-medium hover:text-primary dark:hover:text-primary transition-colors"
+                href="#">Skills</a>
+              <a
+                class="text-sm font-medium hover:text-primary dark:hover:text-primary transition-colors"
+                href="#">Education</a>
+              <a
+                class="text-sm font-medium hover:text-primary dark:hover:text-primary transition-colors"
+                href="#">Projects</a>
+              <a
+                class="text-sm font-medium hover:text-primary dark:hover:text-primary transition-colors"
+                href="#">Contact</a>
+            </nav>
+            <div class="flex items-center">
+              <button
+                class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
+                <span
+                  class="material-symbols-outlined text-gray-900 dark:text-white">
+                  light_mode
+                </span>
+              </button>
+            </div>
+          </div>
+        </header>
+        <main class="flex-grow flex items-center">
+          <div class="max-w-7xl mx-auto py-16 lg:py-24">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+              <div class="text-center lg:text-left">
+                <div
+                  class="flex items-center justify-center lg:justify-start gap-2 mb-4">
+                  <span class="relative flex h-3 w-3">
+                    <span
+                      class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                    <span
+                      class="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
+                  </span>
+                  <p
+                    class="text-sm font-medium text-gray-600 dark:text-gray-400">
+                    Available for work
+                  </p>
+                </div>
+                <h1
+                  class="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tighter text-gray-900 dark:text-white">
+                  Junior Frontend<br />
+                  <span
+                    class="text-primary bg-gradient-to-r from-blue-500 to-purple-500 text-transparent bg-clip-text">Developer</span>
+                </h1>
+                <p
+                  class="mt-6 max-w-xl mx-auto lg:mx-0 text-base md:text-lg text-gray-600 dark:text-gray-400">
+                  Skilled in React.js and modern JavaScript, passionate about
+                  building clean, responsive, and user-friendly web interfaces.
+                  Turning ideas into smooth, interactive experiences.
+                </p>
+                <div
+                  class="mt-10 flex flex-col sm:flex-row sm:justify-center lg:justify-start gap-8 items-center">
+
+                  <div>
+                    <p class="text-4xl font-bold text-primary">10+</p>
+                    <p class="text-sm text-gray-500 dark:text-gray-400">
+                      Projects
+                    </p>
+                  </div>
+                  <div>
+                    <p class="text-4xl font-bold text-primary">5+</p>
+                    <p class="text-sm text-gray-500 dark:text-gray-400">
+                      Technologies
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="mt-12 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                  <a
+                    class="inline-flex items-center justify-center gap-2 px-8 py-3 bg-primary text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 transition-all duration-300 transform hover:-translate-y-1"
+                    href="#">
+                    View My Work
+                    <span class="material-symbols-outlined">arrow_forward</span>
+                  </a>
+                  <a
+                    class="inline-flex items-center justify-center gap-2 px-8 py-3 bg-transparent border border-gray-300 dark:border-gray-700 text-gray-800 dark:text-gray-300 font-semibold rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+                    href="#">
+                    <span class="material-symbols-outlined">download</span>
+                    Download Resume
+                  </a>
+                </div>
+              </div>
+              <div class="relative flex justify-center items-center">
+                <div
+                  class="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-full blur-3xl"></div>
+                <div class="relative w-80 h-80 sm:w-96 sm:h-96">
+                  <div
+                    class="absolute inset-0 rounded-full border-2 border-primary animate-pulse"></div>
+                  <div class="absolute top-8 -left-4 sm:top-12 sm:-left-8 z-10">
+                    <div
+                      class="flex items-center gap-2 bg-gray-200/50 dark:bg-gray-800/50 backdrop-blur-sm px-4 py-2 rounded-full shadow-lg">
+                      <svg
+                        class="icon-react text-cyan-400"
+                        role="img"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <title>React</title>
+                        <path
+                          d="M12.001 2.002c-5.522 0-10 4.478-10 10 0 5.523 4.478 10 10 10 5.523 0 10-4.477 10-10s-4.477-10-10-10zm0 18.002c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"></path>
+                        <ellipse
+                          cx="12.001"
+                          cy="12.002"
+                          rx="2"
+                          ry="5.001"></ellipse>
+                        <path
+                          d="M12.001 12.002c-2.76 0-5 1.12-5 2.5s2.24 2.5 5 2.5 5-1.12 5-2.5-2.24-2.5-5-2.5zm0 3.001c-1.656 0-3-.448-3-1s1.344-1 3-1 3 .448 3 1-1.344 1-3 1z"
+                          transform="rotate(-60 12.001 12.002)"></path>
+                        <path
+                          d="M12.001 12.002c-2.76 0-5 1.12-5 2.5s2.24 2.5 5 2.5 5-1.12 5-2.5-2.24-2.5-5-2.5zm0 3.001c-1.656 0-3-.448-3-1s1.344-1 3-1 3 .448 3 1-1.344 1-3 1z"
+                          transform="rotate(60 12.001 12.002)"></path>
+                      </svg>
+                      <span
+                        class="font-semibold text-sm text-gray-900 dark:text-white">React</span>
+                    </div>
+                  </div>
+                  <div
+                    class="absolute bottom-16 -right-2 sm:bottom-24 sm:-right-6 z-10">
+                    <div
+                      class="flex items-center gap-2 bg-gray-200/50 dark:bg-gray-800/50 backdrop-blur-sm px-4 py-2 rounded-full shadow-lg">
+                      <span
+                        class="material-symbols-outlined text-orange-400 text-lg">bolt</span>
+                      <span
+                        class="font-semibold text-sm text-gray-900 dark:text-white">Fast</span>
+                    </div>
+                  </div>
+                  <div
+                    class="absolute bottom-8 -left-2 sm:bottom-12 sm:-left-8 z-10">
+                    <div
+                      class="flex items-center gap-2 bg-gray-200/50 dark:bg-gray-800/50 backdrop-blur-sm px-4 py-2 rounded-full shadow-lg">
+                      <span
+                        class="material-symbols-outlined text-pink-400 text-lg">design_services</span>
+                      <span
+                        class="font-semibold text-sm text-gray-900 dark:text-white">Design</span>
+                    </div>
+                  </div>
+                  <div
+                    class="w-full h-full rounded-full overflow-hidden shadow-2xl border-4 border-gray-300/50 dark:border-gray-700/50">
+                    <img
+                      alt="Profile picture of Eistiak Ahmed"
+                      class="w-full h-full object-cover"
+                      src="https://i.ibb.co.com/wF1xjPg9/1763497093402.jpg" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+
+      <div class="relative min-h-screen w-full">
+        <div class="container mx-auto px-4 py-8 lg:px-8 lg:py-16">
+          <div class="flex flex-col lg:flex-row lg:gap-8">
+            <!-- Left Sidebar -->
+            <aside
+              class="w-full lg:w-1/3 lg:max-w-xs xl:max-w-sm mb-8 lg:mb-0 lg:sticky lg:top-16 self-start">
+              <div
+                class="flex h-full flex-col justify-between bg-[#191d31] p-6 rounded-xl">
+                <div class="flex flex-col gap-6">
+                  <div class="flex flex-col items-center gap-4 text-center">
+                    <div
+                      class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-24 border-2 border-primary"
+                      data-alt="A portrait of a person"
+                      style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC_pQMyCMEC7QzYvy6i9Fn3FN0AWsKL__3DPoRQpPT_QSayN98au2o5EfSboDa6kK3nzTp2-7y9Ch1Ghsd1xxE_ah2tFnx7dIge3g2rfi8d3Iahj2bIdZOZrcztY5Qqshic4J8Gz4BhigUNdFTva-2WbhnkWny0ZVCBB46x5KluZQKVh6HEepcAwjU1qJLmT2mI46I-fzVI9ZA0FdgfbgDTi9uvKGKGhcuqHGnrzGquzHwcJ7kltSbVT-gkRNBr2cCdIPbUb_5iHJg");'></div>
+                    <div class="flex flex-col">
+                      <h1
+                        class="text-white text-xl font-bold leading-tight">Alice
+                        Johnson</h1>
+                      <p
+                        class="text-slate-400 text-base font-normal leading-normal">Junior
+                        Frontend Developer</p>
+                    </div>
+                  </div>
+                  <div class="flex items-center justify-center gap-2">
+                    <span class="relative flex h-2 w-2">
+                      <span
+                        class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                      <span
+                        class="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+                    </span>
+                    <p
+                      class="text-green-400 text-sm font-medium leading-normal">Available</p>
+                  </div>
+                  <div class="flex flex-col gap-2">
+                    <a
+                      class="flex items-center gap-3 px-3 py-2 rounded-lg bg-primary/20 text-white hover:bg-primary/30 transition-colors"
+                      href="#">
+                      <span
+                        class="material-symbols-outlined text-xl">code</span>
+                      <p class="text-sm font-medium leading-normal">GitHub</p>
+                    </a>
+                    <a
+                      class="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-300 hover:bg-primary/20 hover:text-white transition-colors"
+                      href="#">
+                      <span
+                        class="material-symbols-outlined text-xl">work</span>
+                      <p class="text-sm font-medium leading-normal">LinkedIn</p>
+                    </a>
+                    <a
+                      class="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-300 hover:bg-primary/20 hover:text-white transition-colors"
+                      href="#">
+                      <span
+                        class="material-symbols-outlined text-xl">alternate_email</span>
+                      <p class="text-sm font-medium leading-normal">Twitter</p>
+                    </a>
+                  </div>
+                </div>
+
+              </div>
+            </aside>
+            <!-- Right Content Area -->
+            <main class="w-full lg:w-2/3">
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Introduction Card -->
+                <div
+                  class="md:col-span-2 bg-[#191d31] p-6 rounded-xl border border-slate-800">
+                  <h2
+                    class="text-white text-xl font-bold leading-tight tracking-tight mb-4">About
+                    Me</h2>
+                  <p
+                    class="text-slate-300 text-base font-normal leading-relaxed">
+                    A welcoming paragraph about who the developer is, their
+                    passion for frontend development, and their core values.
+                    This section introduces my journey into the tech world and
+                    highlights my dedication to creating intuitive and dynamic
+                    user experiences. I thrive on turning complex problems into
+                    beautiful, interactive designs.
+                  </p>
+                </div>
+                <!-- What I Do Card -->
+                <div
+                  class="bg-[#191d31] p-6 rounded-xl border border-slate-800">
+                  <h3
+                    class="text-white text-lg font-bold leading-tight tracking-tight mb-4">What
+                    I Do</h3>
+                  <div class="flex flex-col gap-3">
+                    <div class="flex items-start gap-3">
+                      <span
+                        class="material-symbols-outlined text-primary mt-1">devices</span>
+                      <div class="flex flex-col">
+                        <h4 class="text-white font-medium">Responsive UIs</h4>
+                        <p class="text-slate-400 text-sm">Crafting layouts that
+                          work seamlessly on any device.</p>
+                      </div>
+                    </div>
+                    <div class="flex items-start gap-3">
+                      <span
+                        class="material-symbols-outlined text-primary mt-1">hub</span>
+                      <div class="flex flex-col">
+                        <h4 class="text-white font-medium">React
+                          Development</h4>
+                        <p class="text-slate-400 text-sm">Building dynamic
+                          interfaces with modern JavaScript frameworks.</p>
+                      </div>
+                    </div>
+                    <div class="flex items-start gap-3">
+                      <span
+                        class="material-symbols-outlined text-primary mt-1">sync_alt</span>
+                      <div class="flex flex-col">
+                        <h4 class="text-white font-medium">State Management</h4>
+                        <p class="text-slate-400 text-sm">Managing complex
+                          application state for predictable behavior.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Education Card -->
+                <div
+                  class="bg-[#191d31] p-6 rounded-xl border border-slate-800">
+                  <h3
+                    class="text-white text-lg font-bold leading-tight tracking-tight mb-4">Education</h3>
+                  <div class="flex items-start gap-4">
+                    <div class="p-2 bg-primary/20 rounded-lg mt-1">
+                      <span
+                        class="material-symbols-outlined text-primary">school</span>
+                    </div>
+                    <div class="flex flex-col">
+                      <h4 class="text-white font-semibold">State University</h4>
+                      <p class="text-slate-300">B.S. in Computer Science</p>
+                      <p class="text-slate-400 text-sm">Graduated May 2022</p>
+                    </div>
+                  </div>
+                </div>
+                <!-- Goals Card -->
+                <div
+                  class="md:col-span-2 bg-[#191d31] p-6 rounded-xl border border-slate-800">
+                  <h3
+                    class="text-white text-lg font-bold leading-tight tracking-tight mb-4">My
+                    Goals</h3>
+                  <p
+                    class="text-slate-300 text-base font-normal leading-relaxed">
+                    My primary goal is to contribute to a collaborative team
+                    building meaningful products. I'm excited to deepen my
+                    expertise in full-stack development, explore the world of
+                    WebGL for richer user interactions, and continuously adopt
+                    best practices in performance and accessibility to create
+                    web experiences that are not only functional but also
+                    delightful for everyone.
+                  </p>
+                </div>
+              </div>
+            </main>
+          </div>
+        </div>
+      </div>
+
+      <div class="min-h-screen p-4 sm:p-8 md:p-16">
+        <div class="max-w-7xl mx-auto">
+          <header class="text-center mb-12 md:mb-16">
+            <h1
+              class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-2">Skills
+              &amp; Technologies</h1>
+            <p class="text-gray-600 dark:text-gray-400">Technologies and skills
+              I use to build amazing products</p>
+          </header>
+          <div class="space-y-12 md:space-y-16">
+            <section>
+              <div class="flex items-center mb-8">
+                <div class="w-8 h-1 bg-cyan-400 rounded-full mr-4"></div>
+                <h2
+                  class="text-2xl font-semibold text-gray-900 dark:text-white">Frontend</h2>
+              </div>
+              <div
+                class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
+                <div
+                  class="bg-card-light dark:bg-card-dark border border-card-light dark:border-card-dark rounded-lg p-4 flex flex-col items-center text-center transition-transform hover:scale-105">
+                  <img alt="JavaScript logo"
+                    class="h-16 w-16 object-contain mb-4"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBX2In_bK8Ccb4QQVBgK58FeRDDN4sOxjMGvT_W06vzOzdD7fusFWCj_XRCSnrM_hvUsvBLGy9OxtaP34v6EpcOeXEUAFII48TT8fyU-vA-4muQdH2eXnxGQNyfhctJPUO9QgL2qunoUsh4CT9mKr9OMxiOzIW_u7F0pYzZpxufvtdCu2pCN_BKLfA4jL5QdwS4PxbiWjcDjrbd90VbrDMrM97LuP42d53pQ5ZvbihHk7j0AVyMhKWiyVmocB7Zm44T0yvJMMtyaCM" />
+                  <h3
+                    class="font-medium text-sm text-gray-800 dark:text-gray-200 mb-4">JavaScript
+                    (ES6+)</h3>
+                  <div class="w-full mt-auto">
+                    <div
+                      class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-1.5 mb-1">
+                      <div class="bg-cyan-400 h-1.5 rounded-full"
+                        style="width: 96%"></div>
+                    </div>
+                    <p class="text-xs text-gray-500 dark:text-gray-400">96%</p>
+                  </div>
+                </div>
+                <div
+                  class="bg-card-light dark:bg-card-dark border border-card-light dark:border-card-dark rounded-lg p-4 flex flex-col items-center text-center transition-transform hover:scale-105">
+                  <img alt="React.js logo" class="h-16 w-16 object-contain mb-4"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxgjDvOlA14L5tFKI6xeyp38V2bR_oyJ6l0djL_qv-0Gf44LSyGCmYCzRQddf1LICYQUGqow6TaLqF3Dl3a_ZielRLHpHdGs4WPYwzMC8zS9gMOiH-CeIiaXo5zwc24IJVyzKQuEmXbXFGxzJPtB1ru4OVYcP83kFMhxqX4vrHI1OG73QAWiJIigAyG0Q40JT2PR-QgGnmUT-YYbKJZpjEuINxKSzq55BCG2LBvA0cvXxhqEVlcT8ukQisqgkovc7WsNoIbqA0Ycg" />
+                  <h3
+                    class="font-medium text-sm text-gray-800 dark:text-gray-200 mb-4">React.js</h3>
+                  <div class="w-full mt-auto">
+                    <div
+                      class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-1.5 mb-1">
+                      <div class="bg-cyan-400 h-1.5 rounded-full"
+                        style="width: 92%"></div>
+                    </div>
+                    <p class="text-xs text-gray-500 dark:text-gray-400">92%</p>
+                  </div>
+                </div>
+                <div
+                  class="bg-card-light dark:bg-card-dark border border-card-light dark:border-card-dark rounded-lg p-4 flex flex-col items-center text-center transition-transform hover:scale-105">
+                  <img alt="React Router logo"
+                    class="h-16 w-16 object-contain mb-4"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuC7hm6JmJiszHTowA1tRmnsXRugN3XvKcYA6D-NA9D7_8tm7wQWWBgBmjKCMqhWEDI_9J34F1DGyjZ5aub-b3hQnWeVrKBOV_Nn0LWjEFJw_AvGmGHUtlbo5ZJJ74F7ILbbbdbBkjO7MeKpiOvaPHEZbXRoY6rVlIXQ32VcJSTNuebiXjruFmorah-v3jpamzzn-WHGAKQn7Z9_ltWqv5xNoby2QnN9vuEuCJnx9h8oVaCdoPSNZJGUAGe82CIhdHU7ZE52GtoKVak" />
+                  <h3
+                    class="font-medium text-sm text-gray-800 dark:text-gray-200 mb-4">React
+                    Router</h3>
+                  <div class="w-full mt-auto">
+                    <div
+                      class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-1.5 mb-1">
+                      <div class="bg-cyan-400 h-1.5 rounded-full"
+                        style="width: 88%"></div>
+                    </div>
+                    <p class="text-xs text-gray-500 dark:text-gray-400">88%</p>
+                  </div>
+                </div>
+                <div
+                  class="bg-card-light dark:bg-card-dark border border-card-light dark:border-card-dark rounded-lg p-4 flex flex-col items-center text-center transition-transform hover:scale-105">
+                  <img alt="Tailwind CSS logo"
+                    class="h-16 w-16 object-contain mb-4"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCvhRAqy8oOOE_kSOgTbqnoZX2JMLbDKJGS6Un2ZTnjMihYRFR0Rb686hT2BxguflgQjYNe8NhL5leIG4YzDsJywdGHrzYACYPS0qudtJu4PGLuNykPwlMWaEB7SfBqZ8xpHUTdY2AOSbVhh7qzMnPSaCn0DmKgUAurM4SO5Q1Q_3qHhCRoQoJ81-dHBvPBI_af_bfMplsAxI0BJa8xlf40YCf_zl7kkHcXd1HgDqGJOY5hTWTStKucs3QOhXtBC2ZXhL55meUi7ZE" />
+                  <h3
+                    class="font-medium text-sm text-gray-800 dark:text-gray-200 mb-4">Tailwind
+                    CSS</h3>
+                  <div class="w-full mt-auto">
+                    <div
+                      class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-1.5 mb-1">
+                      <div class="bg-cyan-400 h-1.5 rounded-full"
+                        style="width: 90%"></div>
+                    </div>
+                    <p class="text-xs text-gray-500 dark:text-gray-400">90%</p>
+                  </div>
+                </div>
+                <div
+                  class="bg-card-light dark:bg-card-dark border border-card-light dark:border-card-dark rounded-lg p-4 flex flex-col items-center text-center transition-transform hover:scale-105">
+                  <img alt="HTML5 logo" class="h-16 w-16 object-contain mb-4"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-LYH5xUZQlaL4NN5BIm3Xp5rUBKf7OIRTAKuDWfQ6ExZns0tx4lcN4ucdB8kwkqAgJozTcbGau9b2ucYCTHx8UZYJDkqq6_yLoE6hp0axIZjOBJvXjM0ibQWQKUI2pR_JfFEjQkxnLZJFKwTNsx2zsHv4Egh4mJbdFazD8tbMP-4el1pbiE5KxJPHv1FCiobyrrl9OVs8H5kuPGJli0sOaw31bbX-2QIhhHB3e4S2IyJsKRQsaYm0BfwdBmEEHA6M44gJacDq0XA" />
+                  <h3
+                    class="font-medium text-sm text-gray-800 dark:text-gray-200 mb-4">HTML5</h3>
+                  <div class="w-full mt-auto">
+                    <div
+                      class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-1.5 mb-1">
+                      <div class="bg-cyan-400 h-1.5 rounded-full"
+                        style="width: 96%"></div>
+                    </div>
+                    <p class="text-xs text-gray-500 dark:text-gray-400">96%</p>
+                  </div>
+                </div>
+                <div
+                  class="bg-card-light dark:bg-card-dark border border-card-light dark:border-card-dark rounded-lg p-4 flex flex-col items-center text-center transition-transform hover:scale-105">
+                  <img alt="CSS3 logo" class="h-16 w-16 object-contain mb-4"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0TgssBmvh9iEQlEvEBw23tdjhr6X19R1WxPT1mZg9TpND-i0CGWWpjKB6bhk8-PVH63jytZkC7JA43rmhXDr4GS1Sk3yoCMqpiAPeUN4Lxphge4ydJpFGYTXpBzjFiCXrxyrfbEds8jYqUoUsQ0ugwPZUGll5CxxaC0-t0X1Zg4wKUp559FvPbWPI4RT1-ThSjml7uOTwu4dM8okPylCKJ_ttNGay1rLEBscNzSxP9twCZJchZRnHHP-ZRyRNDRxcmzuAvvCjQf0" />
+                  <h3
+                    class="font-medium text-sm text-gray-800 dark:text-gray-200 mb-4">CSS3</h3>
+                  <div class="w-full mt-auto">
+                    <div
+                      class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-1.5 mb-1">
+                      <div class="bg-cyan-400 h-1.5 rounded-full"
+                        style="width: 93%"></div>
+                    </div>
+                    <p class="text-xs text-gray-500 dark:text-gray-400">93%</p>
+                  </div>
+                </div>
+                <div
+                  class="bg-card-light dark:bg-card-dark border border-card-light dark:border-card-dark rounded-lg p-4 flex flex-col items-center text-center transition-transform hover:scale-105">
+                  <img alt="Responsive Design icon"
+                    class="h-16 w-16 object-contain mb-4"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCN55vRGhS13O9CVCGQ2DUadrB2cvSUGtFV0F_-DTqcEvRuPdRVQcW0oBy9S1Bd5Kso0_I73QsxI66hKFvyWxIyRKWWxcUVwJfu_xGnOhliGCksBxrnU_8rZV1tnKC0AK0jV1ntB2g7R5yL8YFlhsHX1O4BmLgtnsHcM3Y5tABEGRkNU9fUubDGKy4KN1d-1JHFXPwdvWEopCNjIq-gYp75y5BMzf6HB8MZ2Ay1Y1muefmEVszrnnhk03jNPUJDnn_Vun5-aj8Deoc" />
+                  <h3
+                    class="font-medium text-sm text-gray-800 dark:text-gray-200 mb-4">Responsive
+                    Design</h3>
+                  <div class="w-full mt-auto">
+                    <div
+                      class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-1.5 mb-1">
+                      <div class="bg-cyan-400 h-1.5 rounded-full"
+                        style="width: 94%"></div>
+                    </div>
+                    <p class="text-xs text-gray-500 dark:text-gray-400">94%</p>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section>
+              <div class="flex items-center mb-8">
+                <div class="w-8 h-1 bg-green-400 rounded-full mr-4"></div>
+                <h2
+                  class="text-2xl font-semibold text-gray-900 dark:text-white">Backend</h2>
+              </div>
+              <div
+                class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
+                <div
+                  class="bg-card-light dark:bg-card-dark border border-card-light dark:border-card-dark rounded-lg p-4 flex flex-col items-center text-center transition-transform hover:scale-105">
+                  <img alt="Node.js logo" class="h-16 w-16 object-contain mb-4"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkvE7eTp9yUTlkgqKs2IW84VB9dR1p9q5WZ6YbRJz5WwreLDU1qpo2VEEm2SYizDYekrV0fNgAgUWo9gSFV8Yk5ZTSGlNqcnZfdBplKBnhuUbW4H5SviCsU2wQ2zgZpjBw5WhU33A5AVRq5EPCakMXO8xZQifWsR8_9FjB1worgGR0nUIBQp6BZVnXBaTU0qUskx2AQpy4z2FZlM4g0wFymL1qk_l37JWpNS6A1CvC16NnWDUshmGeOC1XDDWYs3Uu1yVniP9O5o0" />
+                  <h3
+                    class="font-medium text-sm text-gray-800 dark:text-gray-200 mb-4">Node.js</h3>
+                  <div class="w-full mt-auto">
+                    <div
+                      class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-1.5 mb-1">
+                      <div class="bg-green-400 h-1.5 rounded-full"
+                        style="width: 87%"></div>
+                    </div>
+                    <p class="text-xs text-gray-500 dark:text-gray-400">87%</p>
+                  </div>
+                </div>
+                <div
+                  class="bg-card-light dark:bg-card-dark border border-card-light dark:border-card-dark rounded-lg p-4 flex flex-col items-center text-center transition-transform hover:scale-105">
+                  <img alt="Express.js logo"
+                    class="h-16 w-16 object-contain mb-4"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDE13KgzfTCPGKx0M8ri65rLbjgaW80peTXeIVudqQlpCAC3HnzjbNziiXZ6SVV1639DzRkAHNKls04uKRjvzn5jYsDdhD9fL1BM9bXw38vfMpshW_c5fHMhhJpbi8hAXxmbxiwVywepuOkt2KlwelpXTSXZh6AM-nzyyygKa92pFA9UcwB_wfTbxyGCZFhoklx80CQ0pG8TZhhvaQE73lPzv2MijGXdz5TOdxHJoCIAHE868kssQvk0nA3aoXK0eFgQ3bn5xmU4pM" />
+                  <h3
+                    class="font-medium text-sm text-gray-800 dark:text-gray-200 mb-4">Express.js</h3>
+                  <div class="w-full mt-auto">
+                    <div
+                      class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-1.5 mb-1">
+                      <div class="bg-green-400 h-1.5 rounded-full"
+                        style="width: 86%"></div>
+                    </div>
+                    <p class="text-xs text-gray-500 dark:text-gray-400">86%</p>
+                  </div>
+                </div>
+                <div
+                  class="bg-card-light dark:bg-card-dark border border-card-light dark:border-card-dark rounded-lg p-4 flex flex-col items-center text-center transition-transform hover:scale-105">
+                  <img alt="JWT logo" class="h-16 w-16 object-contain mb-4"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwl3T8KV1LY2TKuCFyyDgSqfLq203QMP290iZ26T7XwgJ7p44KzTtC3ypq3T_Fpgp3sfV37ias19TENDfD1JQQUpupXi0KwxA-PRWxh_JtndMn1ie-L3Yrta1mTrSwly9vfl-4D4j31rtV8L5jB4DOILLwJL_b09XUVNQUfQaexIVi3aiOkTEzwNq9KLPXMasJQkcvFbuFfryffNckw8W1iuLcuVyIYy5Nxw6IXbeoOoqQTmJf_fPdqWdIyfJaxJg-v_Kl9M7uZhg" />
+                  <h3
+                    class="font-medium text-sm text-gray-800 dark:text-gray-200 mb-4">JWT</h3>
+                  <div class="w-full mt-auto">
+                    <div
+                      class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-1.5 mb-1">
+                      <div class="bg-green-400 h-1.5 rounded-full"
+                        style="width: 82%"></div>
+                    </div>
+                    <p class="text-xs text-gray-500 dark:text-gray-400">82%</p>
+                  </div>
+                </div>
+                <div
+                  class="bg-card-light dark:bg-card-dark border border-card-light dark:border-card-dark rounded-lg p-4 flex flex-col items-center text-center transition-transform hover:scale-105">
+                  <img alt="Firebase Auth logo"
+                    class="h-16 w-16 object-contain mb-4"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBUs7TJbHgpJW0Aj2HJqBzkcU771WQIEzbv45fovK3-qZwRR70WqjzzBhHphglItCHwbN9ZJwPY6sH5gsbiO7TVfGQgZOWLdzrHT5w5_nSzTrsGLVs5NtEfSDygwOCg1_iY1pm7p0ZZzUsyVRE9R5DdeBCBlBSjle4Ln7baK3kiwy88_rJYiR1ufQ0320clLjBISL0-JMwThEINNsotCZRqvG0G33WaJTiLmN7PZeTCjmorbMJe6_KymhkvYqWXyGFWRtdueqcQWjk" />
+                  <h3
+                    class="font-medium text-sm text-gray-800 dark:text-gray-200 mb-4">Firebase
+                    Auth</h3>
+                  <div class="w-full mt-auto">
+                    <div
+                      class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-1.5 mb-1">
+                      <div class="bg-green-400 h-1.5 rounded-full"
+                        style="width: 80%"></div>
+                    </div>
+                    <p class="text-xs text-gray-500 dark:text-gray-400">80%</p>
+                  </div>
+                </div>
+                <div
+                  class="bg-card-light dark:bg-card-dark border border-card-light dark:border-card-dark rounded-lg p-4 flex flex-col items-center text-center transition-transform hover:scale-105">
+                  <img alt="REST API icon" class="h-16 w-16 object-contain mb-4"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkDT_C8OTm-rXm7wtKn3oFa2q7JjG0t-a5EiuGbO_5x73pDix28Hilr5TtszcB-qbYbCuEEuMhEx66gEGMFu0j1D0aFHeSHmvZck8Fc4LXlVimK0rCwsdEUijfpjHNe39CzOoHlzk9nELn3yheoJeH7d5FnaYgWsDgGst9JVRzZU69cJofWRudKq0C6e5GD024ZeiaYA_YkR1w4PUfcEq6oxVSyvh_2FhqTggvA-nSkImfYnJ_UDffgFzrjI6X_ZBUeqI2h5_oDJc" />
+                  <h3
+                    class="font-medium text-sm text-gray-800 dark:text-gray-200 mb-4">REST
+                    API</h3>
+                  <div class="w-full mt-auto">
+                    <div
+                      class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-1.5 mb-1">
+                      <div class="bg-green-400 h-1.5 rounded-full"
+                        style="width: 88%"></div>
+                    </div>
+                    <p class="text-xs text-gray-500 dark:text-gray-400">88%</p>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section>
+              <div class="flex items-center mb-8">
+                <div class="w-8 h-1 bg-purple-500 rounded-full mr-4"></div>
+                <h2
+                  class="text-2xl font-semibold text-gray-900 dark:text-white">Database</h2>
+              </div>
+              <div
+                class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
+                <div
+                  class="bg-card-light dark:bg-card-dark border border-card-light dark:border-card-dark rounded-lg p-4 flex flex-col items-center text-center transition-transform hover:scale-105">
+                  <img alt="MongoDB logo" class="h-16 w-16 object-contain mb-4"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDF25HOWmx48WDAquXavS85iX_V75vxJ6Qwd8Iex16wgrQUY7lAXfdF8Ic_I6tNLp6ItatnRu5oWvzLobUxW7GcNOyPvG7rgwRuW6x2JA5uaXsWOxvz7ELnPckl6Rwrah86j928RXv1xU0dEr7ogiz4sF-m6FRrUJyV3XS7TZs2Ekr5eXZflSr4tGHgkNYd4UdjBiGBoosvudIe1e5kPI9Bcl7OPe3TjFnzoZz7qiMrxViQFK9CMyiI4jZJxisVfVVF2WqjKbl84ms" />
+                  <h3
+                    class="font-medium text-sm text-gray-800 dark:text-gray-200 mb-4">MongoDB</h3>
+                  <div class="w-full mt-auto">
+                    <div
+                      class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-1.5 mb-1">
+                      <div class="bg-purple-500 h-1.5 rounded-full"
+                        style="width: 86%"></div>
+                    </div>
+                    <p class="text-xs text-gray-500 dark:text-gray-400">86%</p>
+                  </div>
+                </div>
+                <div
+                  class="bg-card-light dark:bg-card-dark border border-card-light dark:border-card-dark rounded-lg p-4 flex flex-col items-center text-center transition-transform hover:scale-105">
+                  <img alt="Mongoose logo" class="h-16 w-16 object-contain mb-4"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAiUGpqJerTFaaCLnlcahB15jweLiOTHUz1Yl1xB2ISxphWHm8BH_udJ_LKFXehMWNAGiEQWbXLpOSPHJpzy6dstBGgAa3Iudca885YNEmPp-nmtmYaGGmBax9Vyh6SDqDOTZ7oDZhHZmZqON73RjSnXwedjvTpCyvMsvts5R5LYx8MW-_KYZxWh-UYkBdwvxPY-mt9n3gONhrmCD4sJejqZBqKKuY-J29TL8hP8TJgNgcUwZlOV3s2Fo1EQMR-JjpPmC2KrlWGsVI" />
+                  <h3
+                    class="font-medium text-sm text-gray-800 dark:text-gray-200 mb-4">Mongoose</h3>
+                  <div class="w-full mt-auto">
+                    <div
+                      class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-1.5 mb-1">
+                      <div class="bg-purple-500 h-1.5 rounded-full"
+                        style="width: 83%"></div>
+                    </div>
+                    <p class="text-xs text-gray-500 dark:text-gray-400">83%</p>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section>
+              <div class="flex items-center mb-8">
+                <div class="w-8 h-1 bg-orange-500 rounded-full mr-4"></div>
+                <h2
+                  class="text-2xl font-semibold text-gray-900 dark:text-white">Tools</h2>
+              </div>
+              <div
+                class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
+                <div
+                  class="bg-card-light dark:bg-card-dark border border-card-light dark:border-card-dark rounded-lg p-4 flex flex-col items-center text-center transition-transform hover:scale-105">
+                  <img alt="Git &amp; GitHub logo"
+                    class="h-16 w-16 object-contain mb-4"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBcV1YsXseLXxqlimSvpGIgAgrNM8d1tiZdINwo-eKHN1s_CtFpja-XpCe83PxdFFPOg_TYb47FwPIJ0sbogrzyc7P_zwh7qtk33V4LLKWUDSIKWhlrdldM3w1WRHopACx22imRqANtyjYwtbfZLYc4CuHOAeINFlR5QEM1leC8Gqh90W0DANgDlEowp_U4BtNi1SGpHSwSsqSXgcKgDGyrIv8T14I128vcg3Iyd_8m-EgXyBRjtsM4ovTrsFHnX-i9szD5DpTyvjI" />
+                  <h3
+                    class="font-medium text-sm text-gray-800 dark:text-gray-200 mb-4">Git
+                    &amp; GitHub</h3>
+                  <div class="w-full mt-auto">
+                    <div
+                      class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-1.5 mb-1">
+                      <div class="bg-orange-500 h-1.5 rounded-full"
+                        style="width: 90%"></div>
+                    </div>
+                    <p class="text-xs text-gray-500 dark:text-gray-400">90%</p>
+                  </div>
+                </div>
+                <div
+                  class="bg-card-light dark:bg-card-dark border border-card-light dark:border-card-dark rounded-lg p-4 flex flex-col items-center text-center transition-transform hover:scale-105">
+                  <img alt="VS Code logo" class="h-16 w-16 object-contain mb-4"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1iiTXUkASEKIGBXvVls33DiWkylNtOO2fLP9liSx9-cIzVmssXl9tlXxkauXPib63C0o72umsb4sysUwBUdxeoHnkqRx6eCHnbkFQDJ0J9z7AXTYexLTE4ioejUNekEjg7WDtJmUx8habDtHI5QK7d5f0gvlumbRWIgq_Pww4NMYWY1AuMhW94WbsOpEc893FrLZr_AR0FJIW6I6JXhL5e36omWSlSpbQhywL0eLx7O8JXQrTJzFVttqi9dFW_6c0bWKqRFpNWsE" />
+                  <h3
+                    class="font-medium text-sm text-gray-800 dark:text-gray-200 mb-4">VS
+                    Code</h3>
+                  <div class="w-full mt-auto">
+                    <div
+                      class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-1.5 mb-1">
+                      <div class="bg-orange-500 h-1.5 rounded-full"
+                        style="width: 96%"></div>
+                    </div>
+                    <p class="text-xs text-gray-500 dark:text-gray-400">96%</p>
+                  </div>
+                </div>
+                <div
+                  class="bg-card-light dark:bg-card-dark border border-card-light dark:border-card-dark rounded-lg p-4 flex flex-col items-center text-center transition-transform hover:scale-105">
+                  <img alt="Postman logo" class="h-16 w-16 object-contain mb-4"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBM1ZXmEm7QROWjwglzCzuvH9kVg2t7yRDicorMWuluIGWkaLwweUO3IHk2R8EI6JYRLm8F4ix_l5STyrmiXGBjRrCN0JAOzprnIxDhiViw_DsWh3ZHc59ICAe0C4mZxaPnqh_p1BP8Z1CjGC0HgCE9oX-63HQqi4SY8es_3fsGTxcbw_LvLw0Ms1kU5zXS0OBbu4XyuMmlhrtvGMurwlCpCr8GJNA6pYhyaMdgVBV2TrCFeWzebcFW0shLrQMc6u4TJKQ1-XSYybU" />
+                  <h3
+                    class="font-medium text-sm text-gray-800 dark:text-gray-200 mb-4">Postman</h3>
+                  <div class="w-full mt-auto">
+                    <div
+                      class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-1.5 mb-1">
+                      <div class="bg-orange-500 h-1.5 rounded-full"
+                        style="width: 88%"></div>
+                    </div>
+                    <p class="text-xs text-gray-500 dark:text-gray-400">88%</p>
+                  </div>
+                </div>
+                <div
+                  class="bg-card-light dark:bg-card-dark border border-card-light dark:border-card-dark rounded-lg p-4 flex flex-col items-center text-center transition-transform hover:scale-105">
+                  <img alt="Chrome DevTools logo"
+                    class="h-16 w-16 object-contain mb-4"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBugA6inkQsOzb3GwLbTJ0DT_PhvS8m1C3ZHn2WgEKqf-6qBGXNH5ZzGeBKrKQLwvcIpMV9_om62XyI32YKY3AjUoUvC6tPw7UDwIZ_NdQ5mGXu-TEYMr4IJBYeHGkJwig_vGi1LJRSAzlETRzXBxUhsfIgM9g-VJzxNlN1S4KwiGnX6SujHWTqo7nm67AZlwy4YWr0gY20N5VTaJ_wlQCagoY7onUrVBXqdM8xMdWNFeJVa9P_h1aCFKZvrubAQVHEwgE3d2OUdQo" />
+                  <h3
+                    class="font-medium text-sm text-gray-800 dark:text-gray-200 mb-4">Chrome
+                    DevTools</h3>
+                  <div class="w-full mt-auto">
+                    <div
+                      class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-1.5 mb-1">
+                      <div class="bg-orange-500 h-1.5 rounded-full"
+                        style="width: 92%"></div>
+                    </div>
+                    <p class="text-xs text-gray-500 dark:text-gray-400">92%</p>
+                  </div>
+                </div>
+                <div
+                  class="bg-card-light dark:bg-card-dark border border-card-light dark:border-card-dark rounded-lg p-4 flex flex-col items-center text-center transition-transform hover:scale-105">
+                  <img alt="Netlify logo" class="h-16 w-16 object-contain mb-4"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGGRW7-bnlvHcZbnT8ReE25ZfIsxQchiTtefzBuO7KxR3gN5JtEe5jzMmGtwQqAzKGWXZGEnqsQrtfUNaiIUZb_c0DYTj1NmWrWQtqWughMlTie8EDzJ47npRto2FJSNFgb45BwB5zKvAvV5Tyx8HAlt1V7Qo77bXSw3W5Ra1__xDF3mGgdweOyB-emkNvVvTWK4v6qqL_U2KkhkY7M0kUOQP4gXiOKjK90z7s4DDtzKCLdgVEuQSg5PnkEK3OrfUIKTWeF96ep3A" />
+                  <h3
+                    class="font-medium text-sm text-gray-800 dark:text-gray-200 mb-4">Netlify</h3>
+                  <div class="w-full mt-auto">
+                    <div
+                      class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-1.5 mb-1">
+                      <div class="bg-orange-500 h-1.5 rounded-full"
+                        style="width: 86%"></div>
+                    </div>
+                    <p class="text-xs text-gray-500 dark:text-gray-400">86%</p>
+                  </div>
+                </div>
+                <div
+                  class="bg-card-light dark:bg-card-dark border border-card-light dark:border-card-dark rounded-lg p-4 flex flex-col items-center text-center transition-transform hover:scale-105">
+                  <img alt="Vercel logo" class="h-16 w-16 object-contain mb-4"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWkasbnZ14jEbWKCwLRFUbRQ_RImI5ldESHpX3u9vGS6M-8GIKEJ9WmnuGO8cuiqzH2gdSW4wY6U_yi5dtCQc5mL4hX6om4n1E2mGYVnqkcaW-Xo7BLlZdr6A0xDeUZP8xHtxDP59qbu9ISKaDA754lG_tIvGiOK-c54fbclgYsUwfqIpCnQ5izXM_6oP8Wc0h8LNxNuXg5cGdnP6aFgUU1fZNaZoxBIdpsGcTF4xyW4TcM7q5nUEqOtU5Laj5EL-61xeaBBL8zss" />
+                  <h3
+                    class="font-medium text-sm text-gray-800 dark:text-gray-200 mb-4">Vercel</h3>
+                  <div class="w-full mt-auto">
+                    <div
+                      class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-1.5 mb-1">
+                      <div class="bg-orange-500 h-1.5 rounded-full"
+                        style="width: 87%"></div>
+                    </div>
+                    <p class="text-xs text-gray-500 dark:text-gray-400">87%</p>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section>
+              <div class="flex items-center mb-8">
+                <div class="w-8 h-1 bg-blue-500 rounded-full mr-4"></div>
+                <h2
+                  class="text-2xl font-semibold text-gray-900 dark:text-white">Soft
+                  Skills</h2>
+              </div>
+              <div
+                class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
+                <div
+                  class="bg-card-light dark:bg-card-dark border border-card-light dark:border-card-dark rounded-lg p-4 flex flex-col items-center text-center transition-transform hover:scale-105">
+                  <img alt="Problem Solving icon"
+                    class="h-16 w-16 object-contain mb-4"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDx5GFvdjF2zl3lvpoDjk7xks6ha36a6CiX0UrEXSJCv0YJWejzqMTRehKo25zGjw2KSuXuprEZJq08STPBVXnx-Gu-RzINZISjL23iWUXlRYeDp7QtUmPl07IxxBGSDd3N8RlqrJW7xrSFB1_j_kU7lm6wK4U6FyBOpcreFRtqibr7TQlE-YrnhmFSX5OwH_2LYASqVJjZaD7j_ovU6IiFCV73kwQnG-hv4f0Hb0DOV9nWSNvdrGwsAKZKaJ6PML2GHv_KaXMkoHg" />
+                  <h3
+                    class="font-medium text-sm text-gray-800 dark:text-gray-200 mb-4">Problem
+                    Solving</h3>
+                  <div class="w-full mt-auto">
+                    <div
+                      class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-1.5 mb-1">
+                      <div class="bg-blue-500 h-1.5 rounded-full"
+                        style="width: 93%"></div>
+                    </div>
+                    <p class="text-xs text-gray-500 dark:text-gray-400">93%</p>
+                  </div>
+                </div>
+                <div
+                  class="bg-card-light dark:bg-card-dark border border-card-light dark:border-card-dark rounded-lg p-4 flex flex-col items-center text-center transition-transform hover:scale-105">
+                  <img alt="Teamwork icon" class="h-16 w-16 object-contain mb-4"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDyBvmdLlu4Tu6OAPWZ7JuL_NwIhzl6rdVX2sjltrZTxoFEMEnxGKHVlTdNon_mJiAtGxmoIViKLOw1jAy_ubMtlFN6vxkLRjEvHmOdYeGweHSbBMYSf4Jdd2OejnfhD5CdyugY29PGGTia1DSKEom7O5EhH9UzvEryYkmwl65Nk4OR0dwv3dCAH3eDNflsDWuqa07NqNfOOkQZq8bi73gT8mhutjF8SoMeBUkUiE-qdzMICgHXGL-vshtJ0cMQA5tQyv0AkFHE4wY" />
+                  <h3
+                    class="font-medium text-sm text-gray-800 dark:text-gray-200 mb-4">Teamwork</h3>
+                  <div class="w-full mt-auto">
+                    <div
+                      class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-1.5 mb-1">
+                      <div class="bg-blue-500 h-1.5 rounded-full"
+                        style="width: 90%"></div>
+                    </div>
+                    <p class="text-xs text-gray-500 dark:text-gray-400">90%</p>
+                  </div>
+                </div>
+                <div
+                  class="bg-card-light dark:bg-card-dark border border-card-light dark:border-card-dark rounded-lg p-4 flex flex-col items-center text-center transition-transform hover:scale-105">
+                  <img alt="Time Management icon"
+                    class="h-16 w-16 object-contain mb-4"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDz00xS9UGysSuRifdibBBcEef8IDnuS80BNp4zzPRf5E3FDFlxtIB0i_pR7KjWNOXzdIVhtkYsOVkFC_GGkRSMw9zwQ4Cxh3b42gO6_4acsFNfLX6ak58pFxwlMTP7ezMnilXdwjuuTmor7Ly35pmQoXA-r99AkYWHBGbygU0xgHGG7q4kdqwzJEz10Ol9vj6EhzxrjEeit_khY2vjS56shSIYSE2DAkeAtB5npKZNNHg-Y60HQbasrmsmvUCYi_uJVjPqOAz27cA" />
+                  <h3
+                    class="font-medium text-sm text-gray-800 dark:text-gray-200 mb-4">Time
+                    Management</h3>
+                  <div class="w-full mt-auto">
+                    <div
+                      class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-1.5 mb-1">
+                      <div class="bg-blue-500 h-1.5 rounded-full"
+                        style="width: 88%"></div>
+                    </div>
+                    <p class="text-xs text-gray-500 dark:text-gray-400">88%</p>
+                  </div>
+                </div>
+                <div
+                  class="bg-card-light dark:bg-card-dark border border-card-light dark:border-card-dark rounded-lg p-4 flex flex-col items-center text-center transition-transform hover:scale-105">
+                  <img alt="Communication icon"
+                    class="h-16 w-16 object-contain mb-4"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6tRvqECOKRhOShDHkfr8HwmSrHczJMOi3z6r2Rm7rib7pBSEmbr7WscBWIvmnEFFs5qwmHbzy65802NSWcuKwU6lQ2H5V1Kub_-gZOm2s2brTcGuSFYojv-_QVRhjZQS72qAIiNuYw3y5jC0hAOfD_aYk5lYwB2CXg2sBXym5SaisfYhcItqLF_ZbMnjkKlYmdKoQ_sv3ANoFFn_UJY5uX5IbHVRdUIBB7tf0PTB1qFpvPd2YNPNao4yXtJlcY5maKaD2VyWiQXk" />
+                  <h3
+                    class="font-medium text-sm text-gray-800 dark:text-gray-200 mb-4">Communication</h3>
+                  <div class="w-full mt-auto">
+                    <div
+                      class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-1.5 mb-1">
+                      <div class="bg-blue-500 h-1.5 rounded-full"
+                        style="width: 91%"></div>
+                    </div>
+                    <p class="text-xs text-gray-500 dark:text-gray-400">91%</p>
+                  </div>
+                </div>
+                <div
+                  class="bg-card-light dark:bg-card-dark border border-card-light dark:border-card-dark rounded-lg p-4 flex flex-col items-center text-center transition-transform hover:scale-105">
+                  <img alt="Adaptability icon"
+                    class="h-16 w-16 object-contain mb-4"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNHt237psx7GeITYVNTP7SI8o4HRvbbVOh5hM31mt-r84PK1wCqC0YrN35267zz2nzYAIQytNjIO3KBK4IEdsOwz-CbVgaDcoz-k1E5tq_nHkREc1DF5TjgeUmxl0SKN20uDKMOzpCplllv8s5T1Y2-ODbepMTNsUdKVUpom_Y2SPYFm8X0nK3OIFpECMXXfGG4Xs_avbAtPpaz1xe_a9BDDkImMMQyXgRma_CWM8o7jPa_ucMh70h14mqXqQkJh1veKVZz3z6oiE" />
+                  <h3
+                    class="font-medium text-sm text-gray-800 dark:text-gray-200 mb-4">Adaptability</h3>
+                  <div class="w-full mt-auto">
+                    <div
+                      class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-1.5 mb-1">
+                      <div class="bg-blue-500 h-1.5 rounded-full"
+                        style="width: 89%"></div>
+                    </div>
+                    <p class="text-xs text-gray-500 dark:text-gray-400">89%</p>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+
+      <section
+        class="w-full min-h-screen p-4 sm:p-8 flex items-center justify-center">
+        <div class="max-w-7xl mx-auto w-full">
+          <div class="mb-10">
+            <h2
+              class="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white">Featured
+              Projects</h2>
+            <p class="mt-2 text-base text-gray-600 dark:text-gray-400">A
+              showcase of my recent work and side projects</p>
+          </div>
+          <div class="flex flex-wrap items-center gap-2 mb-10">
+            <button
+              class="px-4 py-2 text-sm font-medium rounded-full bg-primary text-white">All</button>
+            <button
+              class="px-4 py-2 text-sm font-medium rounded-full bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700 transition-colors">Full
+              Stack</button>
+            <button
+              class="px-4 py-2 text-sm font-medium rounded-full bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700 transition-colors">Web
+              App</button>
+          </div>
+          <div class="relative">
+            <div class="flex items-center justify-center gap-8 overflow-hidden">
+              <div
+                class="absolute left-0 top-1/2 -translate-y-1/2 z-10 hidden lg:block">
+                <button
+                  class="w-12 h-12 rounded-full bg-white/10 dark:bg-black/20 backdrop-blur-sm flex items-center justify-center text-white hover:bg-white/20 dark:hover:bg-black/30 transition-colors">
+                  <span class="material-icons">chevron_left</span>
+                </button>
+              </div>
+              <div class="relative flex-shrink-0 w-full max-w-2xl z-10">
+                <div
+                  class="bg-white/5 dark:bg-slate-800/50 backdrop-blur-sm border border-white/10 dark:border-slate-700/80 rounded-lg shadow-2xl shadow-black/20 overflow-hidden">
+                  <div class="relative">
+                    <img
+                      alt="Top-down view of several delicious Thai food dishes on a rustic table."
+                      class="w-full h-80 object-cover"
+                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuCEojOfiktkeGS2EVB5TXJX9ea9sqeKrl4xQf64d-8RbKz4KB3bM-mdYnO7r7HOC-l94BhmdbPY4IkD4H6hPdPMiKgdHxN7EMK6hlqFR9Ml7YTDWVJuY6H7FFl7t0g0CfDc2CKKzUizpJ2jg9wZWsqmA_FGkp8vwH3jUKURE2YqmgXsdgT3qYN_qNvltpBjJscd0DjbPj3-Hm7Pp-dh3M5vQAvGJmWYreQVEkjN5tI6Qmt-ug0zk6xCDV_pwLIl4EgI0i7Juyacsi0" />
+                    <div
+                      class="absolute top-4 right-4 px-3 py-1 text-xs font-semibold text-white bg-primary rounded-full">Full
+                      Stack</div>
+                  </div>
+                  <div class="p-8">
+                    <h3
+                      class="text-xl font-bold text-gray-900 dark:text-white mb-1">Local
+                      Food Lovers Network <span
+                        class="ml-2 text-sm font-medium text-green-500 dark:text-green-400">Full
+                        Stack</span></h3>
+                    <p
+                      class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-6">A
+                      full-stack food review platform where users explore
+                      dishes, share reviews, and save favorites. Engineered
+                      complete CRUD review management system with real-time
+                      search and filtering using optimized regex queries.</p>
+                    <div
+                      class="text-xs font-semibold uppercase text-gray-500 dark:text-gray-500 mb-3 tracking-wider">Tech
+                      Stack</div>
+                    <div class="flex flex-wrap gap-2">
+                      <span
+                        class="px-3 py-1 text-sm bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-300 rounded-md">React.js</span>
+                      <span
+                        class="px-3 py-1 text-sm bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-300 rounded-md">Tailwind
+                        CSS</span>
+                      <span
+                        class="px-3 py-1 text-sm bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-300 rounded-md">Node.js</span>
+                      <span
+                        class="px-3 py-1 text-sm bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-300 rounded-md">Express.js</span>
+                      <span
+                        class="px-3 py-1 text-sm bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-300 rounded-md">MongoDB</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="absolute right-0 top-1/2 -translate-y-1/2 w-full max-w-xl hidden lg:block"
+                style="transform: translateY(-50%) translateX(25%) scale(0.9) rotate(5deg);">
+                <div
+                  class="bg-white/5 dark:bg-slate-800/50 backdrop-blur-sm border border-white/10 dark:border-slate-700/80 rounded-lg shadow-xl shadow-black/20 overflow-hidden opacity-50">
+                  <img
+                    alt="Eucalyptus leaves arranged delicately against a plain background."
+                    class="w-full h-64 object-cover"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfGeHmsvMjL5ttPPEUh9e1jEkvy1fb2JNTV1MoKYWH8Vug8lwSYvz8WtaHbjezG3-cmadcLTtF9iwl4BX4PJND468Qjkx-dQaso3ADQSVsDIn_CES8rONvADVINcv2iki5lxwIHH_5vhlsgnHvX7QLq3P6g1dGR82QmvB6-2hjaJFAyt1ChZQLVewjDfE4sGBn0w5O_NkolO1flg7zl1zHZnBxpFU67REMfeFpIl1fxOXhhP1o1QVOeo49ok9v_zvxmwJODkyKaiA" />
+                  <div class="p-6">
+                    <h3
+                      class="text-lg font-bold text-gray-900 dark:text-white">GreenNest
+                      - Plant Care App</h3>
+                    <p
+                      class="text-gray-600 dark:text-gray-400 text-sm mt-2 truncate">A
+                      plant-care and product exploration SPA featuring user
+                      authentication, category-based filtering, and
+                      smooth...</p>
+                    <div
+                      class="text-xs font-semibold uppercase text-gray-500 dark:text-gray-500 mt-4 mb-2 tracking-wider">Tech
+                      Stack</div>
+                    <div class="flex flex-wrap gap-2">
+                      <span
+                        class="px-2 py-1 text-xs bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-300 rounded">React.js</span>
+                      <span
+                        class="px-2 py-1 text-xs bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-300 rounded">Firebase
+                        Auth</span>
+                      <span
+                        class="px-2 py-1 text-xs bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-300 rounded">Tailwind
+                        CSS</span>
+                      <span
+                        class="px-2 py-1 text-xs bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-300 rounded">DaisyUI</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="absolute right-0 top-1/2 -translate-y-1/2 z-10 hidden lg:block">
+                <button
+                  class="w-12 h-12 rounded-full bg-white/10 dark:bg-black/20 backdrop-blur-sm flex items-center justify-center text-white hover:bg-white/20 dark:hover:bg-black/30 transition-colors">
+                  <span class="material-icons">chevron_right</span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="flex justify-center items-center gap-2 mt-10">
+            <button class="w-2 h-2 rounded-full bg-primary"></button>
+            <button
+              class="w-2 h-2 rounded-full bg-gray-300 dark:bg-gray-700 hover:bg-primary/70 transition-colors"></button>
+            <button
+              class="w-2 h-2 rounded-full bg-gray-300 dark:bg-gray-700 hover:bg-primary/70 transition-colors"></button>
+          </div>
+        </div>
+      </section>
+      <div
+        class="relative flex min-h-screen w-full flex-col items-center justify-center p-4">
+        <div class="flex w-full max-w-4xl flex-col">
+          <h2
+            class="text-slate-900 dark:text-white text-3xl font-bold leading-tight tracking-tighter px-4 pb-3 pt-5">Languages</h2>
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 p-4">
+            <div class="group relative flex flex-col items-center gap-4">
+              <div class="relative h-48 w-48">
+                <svg class="h-full w-full" viewbox="0 0 100 100">
+                  <circle
+                    class="stroke-current text-gray-200 dark:text-gray-700"
+                    cx="50" cy="50" fill="transparent" r="40"
+                    stroke-width="8"></circle>
+                  <circle class="stroke-current text-primary" cx="50" cy="50"
+                    fill="transparent" r="40" stroke-dasharray="251.2"
+                    stroke-dashoffset="calc(251.2 - (251.2 * 95) / 100)"
+                    stroke-linecap="round" stroke-width="8"
+                    transform="rotate(-90 50 50)"></circle>
+                </svg>
+                <div
+                  class="absolute inset-0 flex flex-col items-center justify-center">
+                  <span
+                    class="text-3xl font-bold text-slate-900 dark:text-white">95%</span>
+                  <span
+                    class="text-sm text-slate-500 dark:text-slate-400">Native</span>
+                </div>
+              </div>
+              <div class="flex items-center gap-2">
+                <span
+                  class="material-symbols-outlined text-slate-700 dark:text-slate-300">language</span>
+                <h3
+                  class="text-lg font-semibold text-slate-900 dark:text-white">Bangla</h3>
+              </div>
+              <div
+                class="absolute bottom-full mb-2 hidden w-auto scale-95 transform-gpu rounded-md bg-slate-900 px-3 py-1.5 text-xs font-medium text-white opacity-0 transition-all duration-200 group-hover:block group-hover:scale-100 group-hover:opacity-100">
+                Native/Fluent Proficiency
+              </div>
+            </div>
+            <div class="group relative flex flex-col items-center gap-4">
+              <div class="relative h-48 w-48">
+                <svg class="h-full w-full" viewbox="0 0 100 100">
+                  <circle
+                    class="stroke-current text-gray-200 dark:text-gray-700"
+                    cx="50" cy="50" fill="transparent" r="40"
+                    stroke-width="8"></circle>
+                  <circle class="stroke-current text-primary" cx="50" cy="50"
+                    fill="transparent" r="40" stroke-dasharray="251.2"
+                    stroke-dashoffset="calc(251.2 - (251.2 * 75) / 100)"
+                    stroke-linecap="round" stroke-width="8"
+                    transform="rotate(-90 50 50)"></circle>
+                </svg>
+                <div
+                  class="absolute inset-0 flex flex-col items-center justify-center">
+                  <span
+                    class="text-3xl font-bold text-slate-900 dark:text-white">75%</span>
+                  <span
+                    class="text-sm text-slate-500 dark:text-slate-400">Professional</span>
+                </div>
+              </div>
+              <div class="flex items-center gap-2">
+                <span
+                  class="material-symbols-outlined text-slate-700 dark:text-slate-300">language</span>
+                <h3
+                  class="text-lg font-semibold text-slate-900 dark:text-white">Spanish</h3>
+              </div>
+              <div
+                class="absolute bottom-full mb-2 hidden w-auto scale-95 transform-gpu rounded-md bg-slate-900 px-3 py-1.5 text-xs font-medium text-white opacity-0 transition-all duration-200 group-hover:block group-hover:scale-100 group-hover:opacity-100">
+                Professional Working Proficiency
+              </div>
+            </div>
+            <div class="group relative flex flex-col items-center gap-4">
+              <div class="relative h-48 w-48">
+                <svg class="h-full w-full" viewbox="0 0 100 100">
+                  <circle
+                    class="stroke-current text-gray-200 dark:text-gray-700"
+                    cx="50" cy="50" fill="transparent" r="40"
+                    stroke-width="8"></circle>
+                  <circle class="stroke-current text-primary" cx="50" cy="50"
+                    fill="transparent" r="40" stroke-dasharray="251.2"
+                    stroke-dashoffset="calc(251.2 - (251.2 * 40) / 100)"
+                    stroke-linecap="round" stroke-width="8"
+                    transform="rotate(-90 50 50)"></circle>
+                </svg>
+                <div
+                  class="absolute inset-0 flex flex-col items-center justify-center">
+                  <span
+                    class="text-3xl font-bold text-slate-900 dark:text-white">40%</span>
+                  <span
+                    class="text-sm text-slate-500 dark:text-slate-400">Elementary</span>
+                </div>
+              </div>
+              <div class="flex items-center gap-2">
+                <span
+                  class="material-symbols-outlined text-slate-700 dark:text-slate-300">language</span>
+                <h3
+                  class="text-lg font-semibold text-slate-900 dark:text-white">German</h3>
+              </div>
+              <div
+                class="absolute bottom-full mb-2 hidden w-auto scale-95 transform-gpu rounded-md bg-slate-900 px-3 py-1.5 text-xs font-medium text-white opacity-0 transition-all duration-200 group-hover:block group-hover:scale-100 group-hover:opacity-100">
+                Elementary Proficiency
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="relative flex min-h-screen w-full flex-col overflow-x-hidden group/design-root">
+        <div class="layout-container flex h-full grow flex-col">
+          <main class="flex flex-1 justify-center py-5 px-4 sm:px-6 lg:px-8">
+            <div
+              class="layout-content-container flex w-full max-w-6xl flex-col">
+              <!-- Contact Section -->
+              <section class="w-full py-16 lg:py-24">
+                <div class="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-16">
+                  <!-- Left Column: Form -->
+                  <div class="flex flex-col gap-8">
+                    <div class="flex flex-col gap-4">
+                      <h1
+                        class="text-3xl font-bold tracking-tighter text-gray-900 dark:text-white sm:text-4xl md:text-5xl">Get
+                        in Touch</h1>
+                      <p class="text-gray-600 dark:text-gray-400 max-w-lg">Have
+                        a project in mind or want to connect? Drop me a message
+                        below, and I'll get back to you as soon as possible.</p>
+                    </div>
+                    <form class="flex flex-col gap-6">
+                      <div class="flex flex-col gap-2">
+                        <label
+                          class="text-sm font-medium text-gray-700 dark:text-gray-300"
+                          for="name">Name</label>
+                        <input
+                          class="form-input w-full rounded-lg border-gray-300 bg-gray-100 px-4 py-3 text-sm text-gray-900 placeholder:text-gray-500 focus:border-primary focus:ring-primary dark:border-gray-700 dark:bg-gray-800 dark:text-white dark:placeholder:text-gray-400"
+                          id="name" placeholder="Enter your name" type="text" />
+                      </div>
+                      <div class="flex flex-col gap-2">
+                        <label
+                          class="text-sm font-medium text-gray-700 dark:text-gray-300"
+                          for="email">Email</label>
+                        <input
+                          class="form-input w-full rounded-lg border-gray-300 bg-gray-100 px-4 py-3 text-sm text-gray-900 placeholder:text-gray-500 focus:border-primary focus:ring-primary dark:border-gray-700 dark:bg-gray-800 dark:text-white dark:placeholder:text-gray-400"
+                          id="email" placeholder="Enter your email"
+                          type="email" />
+                      </div>
+                      <div class="flex flex-col gap-2">
+                        <label
+                          class="text-sm font-medium text-gray-700 dark:text-gray-300"
+                          for="message">Message</label>
+                        <textarea
+                          class="form-textarea w-full resize-none rounded-lg border-gray-300 bg-gray-100 px-4 py-3 text-sm text-gray-900 placeholder:text-gray-500 focus:border-primary focus:ring-primary dark:border-gray-700 dark:bg-gray-800 dark:text-white dark:placeholder:text-gray-400"
+                          id="message" placeholder="Enter your message"
+                          rows="5"></textarea>
+                      </div>
+                      <button
+                        class="flex w-full cursor-pointer items-center justify-center rounded-lg bg-primary px-5 py-3 text-base font-bold text-white transition-colors hover:bg-primary/90"
+                        type="submit">
+                        <span>Send Message</span>
+                      </button>
+                    </form>
+                  </div>
+                  <!-- Right Column: Contact Details -->
+                  <div class="flex flex-col gap-8 lg:pt-20">
+                    <div class="flex items-start gap-4">
+                      <div
+                        class="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-lg bg-primary/20 text-primary">
+                        <span class="material-symbols-outlined">mail</span>
+                      </div>
+                      <div class="flex flex-col gap-1">
+                        <h3
+                          class="font-bold text-gray-900 dark:text-white">Email</h3>
+                        <p
+                          class="text-gray-600 dark:text-gray-400">hello@developer.com</p>
+                      </div>
+                    </div>
+                    <div class="flex items-start gap-4">
+                      <div
+                        class="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-lg bg-primary/20 text-primary">
+                        <span class="material-symbols-outlined">call</span>
+                      </div>
+                      <div class="flex flex-col gap-1">
+                        <h3
+                          class="font-bold text-gray-900 dark:text-white">Phone</h3>
+                        <p class="text-gray-600 dark:text-gray-400">+1 (555)
+                          123-4567</p>
+                      </div>
+                    </div>
+                    <div class="flex items-start gap-4">
+                      <div
+                        class="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-lg bg-primary/20 text-primary">
+                        <span
+                          class="material-symbols-outlined">location_on</span>
+                      </div>
+                      <div class="flex flex-col gap-1">
+                        <h3
+                          class="font-bold text-gray-900 dark:text-white">Location</h3>
+                        <p class="text-gray-600 dark:text-gray-400">San
+                          Francisco, CA</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <!-- Divider -->
+              <div
+                class="w-full border-t border-gray-200 dark:border-gray-800"></div>
+              <!-- Footer Section -->
+              <footer class="w-full py-12">
+                <div class="grid grid-cols-1 gap-10 md:grid-cols-12 md:gap-8">
+                  <!-- About Me Column -->
+                  <div class="flex flex-col gap-4 md:col-span-5">
+                    <h3
+                      class="text-lg font-bold text-gray-900 dark:text-white">Junior
+                      Developer</h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-400">
+                      Passionate about crafting clean, efficient, and
+                      user-friendly web experiences. I specialize in modern
+                      frontend technologies to build beautiful and responsive
+                      websites.
+                    </p>
+                  </div>
+                  <!-- Spacer -->
+                  <div class="hidden md:block md:col-span-1"></div>
+                  <!-- Navigation Links -->
+                  <div class="md:col-span-2">
+                    <h4
+                      class="mb-4 font-semibold text-gray-900 dark:text-white">Navigation</h4>
+                    <ul class="space-y-3">
+                      <li><a
+                          class="text-sm text-gray-600 hover:text-primary dark:text-gray-400 dark:hover:text-primary"
+                          href="#">Home</a></li>
+                      <li><a
+                          class="text-sm text-gray-600 hover:text-primary dark:text-gray-400 dark:hover:text-primary"
+                          href="#">Projects</a></li>
+                      <li><a
+                          class="text-sm text-gray-600 hover:text-primary dark:text-gray-400 dark:hover:text-primary"
+                          href="#">About</a></li>
+                    </ul>
+                  </div>
+                  <!-- Social Links -->
+                  <div class="md:col-span-4">
+                    <h4
+                      class="mb-4 font-semibold text-gray-900 dark:text-white">Connect
+                      with Me</h4>
+                    <div class="flex items-center gap-4">
+                      <a
+                        class="text-gray-500 hover:text-primary dark:text-gray-400 dark:hover:text-primary"
+                        href="#">
+                        <svg aria-hidden="true" class="h-6 w-6"
+                          fill="currentColor" viewbox="0 0 24 24"><path
+                            clip-rule="evenodd"
+                            d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.168 6.839 9.49.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.031-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.03 1.595 1.03 2.688 0 3.848-2.338 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12c0-5.523-4.477-10-10-10z"
+                            fill-rule="evenodd"></path></svg>
+                      </a>
+                      <a
+                        class="text-gray-500 hover:text-primary dark:text-gray-400 dark:hover:text-primary"
+                        href="#">
+                        <svg aria-hidden="true" class="h-6 w-6"
+                          fill="currentColor" viewbox="0 0 24 24"><path
+                            d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path></svg>
+                      </a>
+                      <a
+                        class="text-gray-500 hover:text-primary dark:text-gray-400 dark:hover:text-primary"
+                        href="#">
+                        <svg aria-hidden="true" class="h-6 w-6"
+                          fill="currentColor" viewbox="0 0 24 24"><path
+                            d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="mt-10 border-t border-gray-200 pt-8 text-center dark:border-gray-800">
+                  <p class="text-sm text-gray-500 dark:text-gray-400">© 2024
+                    Junior Developer. All Rights Reserved.</p>
+                </div>
+              </footer>
+            </div>
+          </main>
+        </div>
+      </div>
+    </body>
+  </html>

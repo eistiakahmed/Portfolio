@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined');
+@import 'tailwindcss';
+
+@layer base {
+  * {
+    @apply transition-colors duration-200;
+  }
+
+  body {
+    font-family: 'Poppins', sans-serif;
+    @apply antialiased bg-white dark:bg-black text-gray-800 dark:text-gray-300;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Custom cursor only on desktop */
+  @media (min-width: 768px) {
+    body {
+      cursor: none;
+    }
+    
+    a, button, input, textarea, select {
+      cursor: none;
+    }
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-gray-100 dark:bg-gray-900;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-gradient-to-b from-blue-500 to-purple-500 rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply from-blue-600 to-purple-600;
+  }
+}
+
+@layer utilities {
+  /* Smooth animations */
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  .animate-pulse-slow {
+    animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  .animate-gradient {
+    background-size: 200% 200%;
+    animation: gradient 3s ease infinite;
+  }
+
+  /* Glass morphism */
+  .glass {
+    @apply bg-white/10 backdrop-blur-lg border border-white/20;
+  }
+
+  .glass-dark {
+    @apply bg-black/10 backdrop-blur-lg border border-black/20;
+  }
+
+  /* Text gradient */
+  .text-gradient {
+    @apply bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 text-transparent bg-clip-text;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Smooth page transitions */
+@media (prefers-reduced-motion: no-preference) {
+  * {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Remove custom cursor on mobile */
+@media (max-width: 768px) {
+  body, a, button, input, textarea, select {
+    cursor: auto !important;
+  }
+}
