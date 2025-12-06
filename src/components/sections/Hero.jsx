@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import { ArrowRight, Download, Zap, Palette, Sparkles } from 'lucide-react';
 import { motion, useInView } from 'framer-motion';
 import gsap from 'gsap';
+import Typewriter from '../ui/Typewriter';
 
 const Hero = () => {
   const titleRef = useRef(null);
@@ -82,18 +83,21 @@ const Hero = () => {
               </p>
             </motion.div>
 
-            <motion.h1 
+            <motion.div 
               variants={itemVariants}
-              className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tighter text-gray-900 dark:text-white mb-6"
+              className="mb-6"
             >
-              Junior Frontend<br />
-              <span 
-                ref={titleRef}
-                className="bg-linear-to-r from-blue-600 via-purple-600 to-pink-600 text-transparent bg-clip-text"
-              >
-                Developer
-              </span>
-            </motion.h1>
+              <Typewriter 
+                roles={[
+                  'Junior Frontend Developer',
+                  'Junior MERN Stack Developer',
+                  'Junior React Developer'
+                ]}
+                speed={100}
+                deleteSpeed={50}
+                pauseTime={2000}
+              />
+            </motion.div>
 
             <motion.p 
               variants={itemVariants}

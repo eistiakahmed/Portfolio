@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { Zap, Moon, Sun, Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { FaBolt, FaGithub, FaLinkedin, FaTwitter, FaEnvelope } from 'react-icons/fa';
+import { HiMenu, HiX, HiShare } from 'react-icons/hi';
 
-const Navbar = ({ darkMode, setDarkMode }) => {
+const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isSocialOpen, setIsSocialOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState('');
 
@@ -28,9 +30,32 @@ const Navbar = ({ darkMode, setDarkMode }) => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const toggleDarkMode = () => {
-    setDarkMode(darkMode === 'dark' ? 'light' : 'dark');
-  };
+  const socialLinks = [
+    {
+      name: 'GitHub',
+      icon: FaGithub,
+      href: 'https://github.com/eistiakahmed',
+      color: 'hover:text-gray-900 dark:hover:text-white',
+    },
+    {
+      name: 'LinkedIn',
+      icon: FaLinkedin,
+      href: 'https://linkedin.com/in/eistiak-ahmed',
+      color: 'hover:text-blue-600',
+    },
+    {
+      name: 'Twitter',
+      icon: FaTwitter,
+      href: 'https://twitter.com/eistiakahmed',
+      color: 'hover:text-blue-400',
+    },
+    {
+      name: 'Email',
+      icon: FaEnvelope,
+      href: 'mailto:eistiakahmedmeraj@gmail.com',
+      color: 'hover:text-red-500',
+    },
+  ];
 
   const navLinks = [
     { name: 'About', href: '#about' },
@@ -58,7 +83,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
           transition={{ type: 'spring', stiffness: 400 }}
         >
           <motion.div
-            className="bg-linear-to-br from-blue-600 to-purple-600 p-2 rounded-lg shadow-lg"
+            className="bg-gradient-to-br from-blue-600 to-purple-600 p-2 rounded-lg shadow-lg"
             animate={{
               rotate: [0, 10, -10, 0],
             }}
@@ -68,9 +93,9 @@ const Navbar = ({ darkMode, setDarkMode }) => {
               ease: 'easeInOut',
             }}
           >
-            <Zap className="h-6 w-6 text-white" fill="currentColor" />
+            <FaBolt className="h-6 w-6 text-white" />
           </motion.div>
-          <span className="text-xl font-bold bg-linear-to-r from-gray-900 to-gray-700 dark:from-white dark:to-gray-300 text-transparent bg-clip-text">
+          <span className="text-xl font-bold bg-gradient-to-r from-gray-900 to-gray-700 dark:from-white dark:to-gray-300 text-transparent bg-clip-text">
             Eistiak Ahmed
           </span>
         </motion.div>
@@ -104,7 +129,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
                   />
                 )}
                 <motion.div
-                  className="absolute bottom-0 left-0 right-0 h-0.5 bg-linear-to-r from-blue-600 to-purple-600"
+                  className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-blue-600 to-purple-600"
                   initial={{ scaleX: 0 }}
                   whileHover={{ scaleX: 1 }}
                   transition={{ duration: 0.3 }}
@@ -116,38 +141,63 @@ const Navbar = ({ darkMode, setDarkMode }) => {
 
         {/* Right Buttons */}
         <div className="flex items-center space-x-4">
-          {/* Dark Mode Toggle */}
-          <motion.button
-            onClick={toggleDarkMode}
-            className="relative p-2 rounded-full bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors focus:outline-none overflow-hidden"
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-            aria-label="Toggle Dark Mode"
-          >
-            <AnimatePresence mode="wait">
-              {darkMode === 'dark' ? (
-                <motion.div
-                  key="sun"
-                  initial={{ rotate: -90, opacity: 0 }}
-                  animate={{ rotate: 0, opacity: 1 }}
-                  exit={{ rotate: 90, opacity: 0 }}
-                  transition={{ duration: 0.3 }}
-                >
-                  <Sun className="h-5 w-5 text-yellow-500" />
-                </motion.div>
-              ) : (
-                <motion.div
-                  key="moon"
-                  initial={{ rotate: 90, opacity: 0 }}
-                  animate={{ rotate: 0, opacity: 1 }}
-                  exit={{ rotate: -90, opacity: 0 }}
-                  transition={{ duration: 0.3 }}
-                >
-                  <Moon className="h-5 w-5 text-gray-700 dark:text-gray-300" />
-                </motion.div>
+          {/* Social Links Dropdown */}
+          <div className="relative">
+            <motion.button
+              onClick={() => setIsSocialOpen(!isSocialOpen)}
+              className="relative p-2 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white transition-all focus:outline-none shadow-md hover:shadow-lg"
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              aria-label="Social Links"
+            >
+              <HiShare className="h-5 w-5" />
+            </motion.button>
+
+            {/* Social Dropdown Menu */}
+            <AnimatePresence>
+              {isSocialOpen && (
+                <>
+                  {/* Backdrop */}
+                  <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    className="fixed inset-0 z-40"
+                    onClick={() => setIsSocialOpen(false)}
+                  />
+                  
+                  {/* Dropdown */}
+                  <motion.div
+                    initial={{ opacity: 0, scale: 0.95, y: -10 }}
+                    animate={{ opacity: 1, scale: 1, y: 0 }}
+                    exit={{ opacity: 0, scale: 0.95, y: -10 }}
+                    transition={{ duration: 0.2 }}
+                    className="absolute right-0 mt-2 w-48 bg-white dark:bg-gray-800 rounded-xl shadow-2xl border border-gray-200 dark:border-gray-700 overflow-hidden z-50"
+                  >
+                    <div className="p-2">
+                      {socialLinks.map((social, index) => (
+                        <motion.a
+                          key={social.name}
+                          href={social.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className={`flex items-center gap-3 px-4 py-3 rounded-lg text-gray-700 dark:text-gray-300 ${social.color} transition-all group`}
+                          initial={{ opacity: 0, x: -20 }}
+                          animate={{ opacity: 1, x: 0 }}
+                          transition={{ delay: index * 0.05 }}
+                          whileHover={{ x: 5, backgroundColor: 'rgba(59, 130, 246, 0.1)' }}
+                          onClick={() => setIsSocialOpen(false)}
+                        >
+                          <social.icon className="w-5 h-5" />
+                          <span className="font-medium">{social.name}</span>
+                        </motion.a>
+                      ))}
+                    </div>
+                  </motion.div>
+                </>
               )}
             </AnimatePresence>
-          </motion.button>
+          </div>
 
           {/* Mobile Menu Button */}
           <motion.button
@@ -165,7 +215,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
                   exit={{ rotate: 90, opacity: 0 }}
                   transition={{ duration: 0.2 }}
                 >
-                  <X className="h-6 w-6 text-gray-900 dark:text-white" />
+                  <HiX className="h-6 w-6 text-gray-900 dark:text-white" />
                 </motion.div>
               ) : (
                 <motion.div
@@ -175,7 +225,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
                   exit={{ rotate: -90, opacity: 0 }}
                   transition={{ duration: 0.2 }}
                 >
-                  <Menu className="h-6 w-6 text-gray-900 dark:text-white" />
+                  <HiMenu className="h-6 w-6 text-gray-900 dark:text-white" />
                 </motion.div>
               )}
             </AnimatePresence>
@@ -201,7 +251,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: index * 0.1 }}
-                  className="block px-4 py-3 text-base font-medium text-gray-600 dark:text-gray-300 hover:bg-linear-to-r hover:from-blue-50 hover:to-purple-50 dark:hover:from-blue-900/20 dark:hover:to-purple-900/20 hover:text-blue-600 dark:hover:text-blue-400 rounded-lg transition-all"
+                  className="block px-4 py-3 text-base font-medium text-gray-600 dark:text-gray-300 hover:bg-gradient-to-r hover:from-blue-50 hover:to-purple-50 dark:hover:from-blue-900/20 dark:hover:to-purple-900/20 hover:text-blue-600 dark:hover:text-blue-400 rounded-lg transition-all"
                   onClick={() => setIsMenuOpen(false)}
                   whileHover={{ x: 5 }}
                 >

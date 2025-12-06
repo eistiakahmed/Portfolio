@@ -1,27 +1,121 @@
 import React, { useState } from 'react';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { FaGithub, FaExternalLinkAlt, FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 
 const projectsData = [
   {
     id: 1,
-    title: 'Local Food Lovers Network',
-    category: 'Full Stack',
-    image:
-      'https://lh3.googleusercontent.com/aida-public/AB6AXuCEojOfiktkeGS2EVB5TXJX9ea9sqeKrl4xQf64d-8RbKz4KB3bM-mdYnO7r7HOC-l94BhmdbPY4IkD4H6hPdPMiKgdHxN7EMK6hlqFR9Ml7YTDWVJuY6H7FFl7t0g0CfDc2CKKzUizpJ2jg9wZWsqmA_FGkp8vwH3jUKURE2YqmgXsdgT3qYN_qNvltpBjJscd0DjbPj3-Hm7Pp-dh3M5vQAvGJmWYreQVEkjN5tI6Qmt-ug0zk6xCDV_pwLIl4EgI0i7Juyacsi0',
+    title: 'Warm Paws - Pet Care in Winter',
+    category: 'Frontend',
+    image: 'https://i.ibb.co.com/mVS4gGn1/Screenshot-2025-12-06-024811.png',
     description:
-      'A full-stack food review platform where users explore dishes, share reviews, and save favorites. Engineered complete CRUD review management system with real-time search and filtering using optimized regex queries.',
-    techStack: ['React.js', 'Tailwind CSS', 'Node.js', 'Express.js', 'MongoDB'],
+      'Warm Paws is a winter-themed pet care platform built to help pet owners provide better care during cold seasons.It offers essential services such as Clothing, Comfort, Grooming, Health, Wellness, and Outdoor Care, ensuring pets stay warm, safe, and healthy.',
+    techStack: [
+      'React.js',
+      'Tailwind CSS',
+      'React Router',
+      'Axios',
+      'Firebase',
+      'AOS',
+    ],
+    liveLink: 'https://warmpaws-winter.netlify.app/',
+    gitHubRepo: 'https://github.com/eistiakahmed/Warm-Paws.git',
   },
   {
     id: 2,
-    title: 'GreenNest - Plant Care App',
-    category: 'Web App',
-    image:
-      'https://lh3.googleusercontent.com/aida-public/AB6AXuDfGeHmsvMjL5ttPPEUh9e1jEkvy1fb2JNTV1MoKYWH8Vug8lwSYvz8WtaHbjezG3-cmadcLTtF9iwl4BX4PJND468Qjkx-dQaso3ADQSVsDIn_CES8rONvADVINcv2iki5lxwIHH_5vhlsgnHvX7QLq3P6g1dGR82QmvB6-2hjaJFAyt1ChZQLVewjDfE4sGBn0w5O_NkolO1flg7zl1zHZnBxpFU67REMfeFpIl1fxOXhhP1o1QVOeo49ok9v_zvxmwJODkyKaiA',
+    title: 'Fureverly',
+    category: 'Full Stack',
+    image: 'https://i.ibb.co.com/v6qDXWXX/Screenshot-2025-12-06-030605.png',
     description:
-      'A plant-care and product exploration SPA featuring user authentication, category-based filtering, and smooth interactions.',
-    techStack: ['React.js', 'Firebase Auth', 'Tailwind CSS', 'DaisyUI'],
+      'Fureverly is a full-featured pet product management system built with the MERN stack.Users and admins can manage products, handle orders, and export order details as PDF.The platform features a clean UI, theme switch, smooth animations, and a responsive experience.',
+    techStack: [
+      'React.js',
+      'Firebase Auth',
+      'Tailwind CSS',
+      'DaisyUI',
+      'Vite',
+      'React Router',
+      'Node.js',
+      'Express.js',
+      'MongoDB',
+      'Farmer Motion',
+    ],
+    liveLink: 'https://fureverly.netlify.app/',
+    gitHubClient: 'https://github.com/eistiakahmed/Fureverly-Client.git',
+    gitHubServer: 'https://github.com/eistiakahmed/Fureverly-Server.git',
+  },
+  {
+    id: 3,
+    title: 'Hero.IO',
+    category: 'Frontend',
+    image: 'https://i.ibb.co.com/svcKpBzB/Screenshot-2025-12-06-031256.png',
+    description:
+      'Hero IO is a modern and intuitive platform designed for discovering, downloading, and managing apps with ease. Built with a sleek UI and smooth user experience, it offers trending app suggestions, app details, installation management, and seamless navigation across pages.',
+    techStack: [
+      'React.js, React Router, Tailwind CSS',
+      'DaisyUI',
+      'Recharts',
+      'Axios',
+      'React Icons',
+      'React Toastify',
+    ],
+    liveLink: 'https://hero-oi-application.netlify.app/',
+    gitHubRepo: 'https://github.com/eistiakahmed/Hero-IO.git',
+  },
+  {
+    id: 4,
+    title: 'BongoCart',
+    category: 'Full Stack',
+    image: 'https://i.ibb.co.com/jkMSVMCM/Screenshot-2025-12-06-032224.png',
+    description:
+      'BongoCart is a lightweight e-commerce prototype built with Next.js, where users can browse a collection of clothing products. After logging in, users can add new products, view detailed information, update or delete their own products, and manage all items they’ve posted.',
+    techStack: [
+      'Next.js',
+      'React.js, Tailwind CSS',
+      'DaisyUI',
+      'Firebase',
+      'Axios',
+      'React Icons',
+      'React Toastify',
+    ],
+    liveLink: 'https://bongo-cart-bd.vercel.app/',
+    gitHubClient: 'https://github.com/eistiakahmed/bongo-cart.git',
+    gitHubServer: 'https://github.com/eistiakahmed/bongo-cart-backend.git',
+  },
+  {
+    id: 5,
+    title: 'Taxi Kitchen',
+    category: 'Frontend',
+    image: 'https://i.ibb.co.com/N2cpbTqg/Screenshot-2025-12-06-032938.png',
+    description:
+      'Designed an interactive kitchen dashboard where staff can mark orders as Cooked and ready to serve, improving order visibility and efficiency.Designed an interactive kitchen dashboard where staff can mark orders as Cooked and ready to serve, improving order visibility and efficiency',
+    techStack: [
+      'React.js, Tailwind CSS',
+      'DaisyUI',
+      'Axios',
+      'React Icons',
+      'React Spinners',
+      'React Toastify',
+    ],
+    liveLink: 'https://taxi-kitchen-hub.netlify.app/',
+    gitHubRepo: 'https://github.com/eistiakahmed/taxi-kitchen.git',
+  },
+  {
+    id: 6,
+    title: 'Emergency Service Directory',
+    category: 'Frontend',
+    image: 'https://i.ibb.co.com/zVdNB1Rk/Screenshot-2025-12-06-035110.png',
+    description:
+      'Emergency Service Directory is a platform that provides access to a wide range of hotline numbers. With just one click, you can copy any number to your clipboard. The website also keeps track of your call history, showing which numbers you have called.',
+    techStack: [
+      'React.js, Tailwind CSS',
+      'DaisyUI',
+      'Axios',
+      'React Icons',
+      'React Spinners',
+      'React Toastify',
+    ],
+    liveLink: 'https://emergency-service-directory-bd.netlify.app/',
   },
 ];
 
@@ -67,13 +161,13 @@ const Projects = () => {
 
         {/* Filter Buttons */}
         <div className="flex flex-wrap items-center gap-2 mb-10">
-          {['All', 'Full Stack', 'Web App'].map((cat) => (
+          {['All', 'Full Stack', 'Frontend'].map((cat) => (
             <button
               key={cat}
               onClick={() => setFilter(cat)}
               className={`px-4 py-2 text-sm font-medium rounded-full transition-colors ${
                 filter === cat
-                  ? 'bg-primary text-white'
+                  ? 'bg-blue-600 text-white'
                   : 'bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700'
               }`}
             >
@@ -87,12 +181,14 @@ const Projects = () => {
           <div className="flex items-center justify-center gap-8 overflow-hidden min-h-[500px]">
             {/* Prev Button */}
             <div className="absolute left-0 top-1/2 -translate-y-1/2 z-10 hidden lg:block">
-              <button
+              <motion.button
                 onClick={prevSlide}
                 className="w-12 h-12 rounded-full bg-white/10 dark:bg-black/20 backdrop-blur-sm flex items-center justify-center text-gray-800 dark:text-white hover:bg-white/20 dark:hover:bg-black/30 transition-colors shadow-lg border border-gray-200 dark:border-gray-700"
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
               >
-                <ChevronLeft className="w-6 h-6" />
-              </button>
+                <FaChevronLeft className="w-5 h-5" />
+              </motion.button>
             </div>
 
             {/* Project Card */}
@@ -112,7 +208,7 @@ const Projects = () => {
                       alt={filteredProjects[currentIndex].title}
                       className="w-full h-80 object-cover"
                     />
-                    <div className="absolute top-4 right-4 px-3 py-1 text-xs font-semibold text-white bg-primary rounded-full">
+                    <div className="absolute top-4 right-4 px-3 py-1 text-xs font-semibold text-white bg-blue-600 rounded-full ">
                       {filteredProjects[currentIndex].category}
                     </div>
                   </div>
@@ -126,7 +222,7 @@ const Projects = () => {
                     <div className="text-xs font-semibold uppercase text-gray-500 dark:text-gray-500 mb-3 tracking-wider">
                       Tech Stack
                     </div>
-                    <div className="flex flex-wrap gap-2">
+                    <div className="flex flex-wrap gap-2 mb-6">
                       {filteredProjects[currentIndex].techStack.map((tech) => (
                         <span
                           key={tech}
@@ -136,6 +232,72 @@ const Projects = () => {
                         </span>
                       ))}
                     </div>
+
+                    {/* Action Buttons */}
+                    <div className="flex flex-wrap gap-3">
+                      {/* Live Demo Button - Always show */}
+                      {filteredProjects[currentIndex].liveLink && (
+                        <motion.a
+                          href={filteredProjects[currentIndex].liveLink}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center gap-2 px-5 py-2.5 bg-linear-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all shadow-md hover:shadow-lg"
+                          whileHover={{ scale: 1.05 }}
+                          whileTap={{ scale: 0.95 }}
+                        >
+                          <FaExternalLinkAlt className="w-4 h-4" />
+                          <span>Live Demo</span>
+                        </motion.a>
+                      )}
+
+                      {/* GitHub Buttons - Show for Full Stack projects */}
+                      {filteredProjects[currentIndex].category === 'Full Stack' && (
+                        <>
+                          {filteredProjects[currentIndex].gitHubClient && (
+                            <motion.a
+                              href={filteredProjects[currentIndex].gitHubClient}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="flex items-center gap-2 px-5 py-2.5 bg-gray-800 dark:bg-gray-700 text-white font-semibold rounded-lg hover:bg-gray-900 dark:hover:bg-gray-600 transition-all shadow-md hover:shadow-lg"
+                              whileHover={{ scale: 1.05 }}
+                              whileTap={{ scale: 0.95 }}
+                            >
+                              <FaGithub className="w-4 h-4" />
+                              <span>Client Code</span>
+                            </motion.a>
+                          )}
+                          {filteredProjects[currentIndex].gitHubServer && (
+                            <motion.a
+                              href={filteredProjects[currentIndex].gitHubServer}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="flex items-center gap-2 px-5 py-2.5 bg-gray-800 dark:bg-gray-700 text-white font-semibold rounded-lg hover:bg-gray-900 dark:hover:bg-gray-600 transition-all shadow-md hover:shadow-lg"
+                              whileHover={{ scale: 1.05 }}
+                              whileTap={{ scale: 0.95 }}
+                            >
+                              <FaGithub className="w-4 h-4" />
+                              <span>Server Code</span>
+                            </motion.a>
+                          )}
+                        </>
+                      )}
+
+                      {/* GitHub Button - Show for Frontend projects */}
+                      {filteredProjects[currentIndex].category === 'Frontend' && 
+                       filteredProjects[currentIndex].gitHubRepo && (
+                        <motion.a
+                          href={filteredProjects[currentIndex].gitHubRepo}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center gap-2 px-5 py-2.5 bg-gray-800 dark:bg-gray-700 text-white font-semibold rounded-lg hover:bg-gray-900 dark:hover:bg-gray-600 transition-all shadow-md hover:shadow-lg"
+                          whileHover={{ scale: 1.05 }}
+                          whileTap={{ scale: 0.95 }}
+                        >
+                          <FaGithub className="w-4 h-4" />
+                          <span>GitHub</span>
+                        </motion.a>
+                      )}
+                    </div>
                   </div>
                 </motion.div>
               </AnimatePresence>
@@ -143,12 +305,14 @@ const Projects = () => {
 
             {/* Next Button */}
             <div className="absolute right-0 top-1/2 -translate-y-1/2 z-10 hidden lg:block">
-              <button
+              <motion.button
                 onClick={nextSlide}
                 className="w-12 h-12 rounded-full bg-white/10 dark:bg-black/20 backdrop-blur-sm flex items-center justify-center text-gray-800 dark:text-white hover:bg-white/20 dark:hover:bg-black/30 transition-colors shadow-lg border border-gray-200 dark:border-gray-700"
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
               >
-                <ChevronRight className="w-6 h-6" />
-              </button>
+                <FaChevronRight className="w-5 h-5" />
+              </motion.button>
             </div>
           </div>
         </div>

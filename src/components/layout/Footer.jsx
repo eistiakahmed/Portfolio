@@ -10,7 +10,7 @@ const Footer = () => {
     const ctx = gsap.context(() => {
       // Section fade up
       gsap.from('.footer-section', {
-        opacity: 0,
+        opacity: 100,
         y: 30,
         duration: 1,
         stagger: 0.15,
@@ -19,7 +19,7 @@ const Footer = () => {
 
       // Social icons pop animation
       gsap.from('.social-icon', {
-        opacity: 0,
+        opacity: 100,
         scale: 0.8,
         duration: 0.8,
         delay: 0.4,
@@ -90,26 +90,27 @@ const Footer = () => {
               Connect with Me
             </h4>
             <div className="flex items-center gap-5">
-              <a
-                href="https://github.com/eistiakahmed"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="social-icon text-gray-600 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-all cursor-pointer"
-                aria-label="GitHub"
-              >
-                <FaGithub size={20} color='white'/>
-              </a>
+                 <a
+                    href="https://github.com/eistiakahmed"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="social-icon hover:text-blue-600 dark:hover:text-blue-400 transition-all cursor-pointer"
+    aria-label="GitHub"
+  >
+    <FaGithub size={20} />
+  </a>
 
-              <a
-                href="https://www.linkedin.com/in/eistiak-ahmed/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="social-icon text-gray-600 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-all cursor-pointer"
-                aria-label="LinkedIn"
-              >
-                <FaLinkedin size={20} color='white'/>
-              </a>
-            </div>
+  <a
+    href="https://www.linkedin.com/in/eistiak-ahmed/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="social-icon text-gray-600 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-all cursor-pointer"
+    aria-label="LinkedIn"
+  >
+    <FaLinkedin size={20} />
+  </a>
+</div>
+
           </div>
         </div>
 
