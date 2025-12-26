@@ -1,6 +1,11 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FaGithub, FaExternalLinkAlt, FaChevronLeft, FaChevronRight } from 'react-icons/fa';
+import {
+  FaGithub,
+  FaExternalLinkAlt,
+  FaChevronLeft,
+  FaChevronRight,
+} from 'react-icons/fa';
 
 const projectsData = [
   {
@@ -116,6 +121,33 @@ const projectsData = [
       'React Toastify',
     ],
     liveLink: 'https://emergency-service-directory-bd.netlify.app/',
+  },
+  {
+    id: 7,
+    title: 'Digital Life Lessons',
+    category: 'Full Stack',
+    image:
+      'https://i.ibb.co/3Y8Z0ZCb/screencapture-digital-life-lessons-netlify-app-dashboard-admin-2025-12-23-19-43-05.png',
+    description:
+      'Digital Life Lessons is a full-stack (MERN) web application that allows users to share real-life experiences as meaningful lessons. Users can explore content using search, filters, and pagination, and engage through likes, comments, and favorites. The platform includes role-based access (Admin, Free & Premium users) with secure Stripe payment integration, focusing on community learning and personal growth.',
+    techStack: [
+      'React.js',
+      'Vite',
+      'Tailwind CSS',
+      'DaisyUI',
+      'Framer Motion',
+      'React Router',
+      'Firebase Authentication',
+      'Node.js',
+      'Express.js',
+      'MongoDB',
+      'Stripe Payment',
+    ],
+    liveLink: 'https://digital-life-lessons.netlify.app/',
+    gitHubClient:
+      'https://github.com/eistiakahmed/Digital_Life_Lessons_Frontend.git',
+    gitHubServer:
+      'https://github.com/eistiakahmed/Digital_Life_Lessons_Backend.git',
   },
 ];
 
@@ -251,7 +283,8 @@ const Projects = () => {
                       )}
 
                       {/* GitHub Buttons - Show for Full Stack projects */}
-                      {filteredProjects[currentIndex].category === 'Full Stack' && (
+                      {filteredProjects[currentIndex].category ===
+                        'Full Stack' && (
                         <>
                           {filteredProjects[currentIndex].gitHubClient && (
                             <motion.a
@@ -283,20 +316,20 @@ const Projects = () => {
                       )}
 
                       {/* GitHub Button - Show for Frontend projects */}
-                      {filteredProjects[currentIndex].category === 'Frontend' && 
-                       filteredProjects[currentIndex].gitHubRepo && (
-                        <motion.a
-                          href={filteredProjects[currentIndex].gitHubRepo}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="flex items-center gap-2 px-5 py-2.5 bg-gray-800 dark:bg-gray-700 text-white font-semibold rounded-lg hover:bg-gray-900 dark:hover:bg-gray-600 transition-all shadow-md hover:shadow-lg"
-                          whileHover={{ scale: 1.05 }}
-                          whileTap={{ scale: 0.95 }}
-                        >
-                          <FaGithub className="w-4 h-4" />
-                          <span>GitHub</span>
-                        </motion.a>
-                      )}
+                      {filteredProjects[currentIndex].category === 'Frontend' &&
+                        filteredProjects[currentIndex].gitHubRepo && (
+                          <motion.a
+                            href={filteredProjects[currentIndex].gitHubRepo}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center gap-2 px-5 py-2.5 bg-gray-800 dark:bg-gray-700 text-white font-semibold rounded-lg hover:bg-gray-900 dark:hover:bg-gray-600 transition-all shadow-md hover:shadow-lg"
+                            whileHover={{ scale: 1.05 }}
+                            whileTap={{ scale: 0.95 }}
+                          >
+                            <FaGithub className="w-4 h-4" />
+                            <span>GitHub</span>
+                          </motion.a>
+                        )}
                     </div>
                   </div>
                 </motion.div>
