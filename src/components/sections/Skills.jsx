@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import javascriptLogo from '../../assets/javascript-48.png';
 import reactRouterLogo from '../../assets/React-Router.png';
 import reactLogo from '../../assets/react.png';
+import nextjsLogo from '../../assets/icons8-nextjs-48.png';
 import vscodeLogo from '../../assets/vscode.png';
 import vercelLogo from '../../assets/vercel.png';
 import teamworkLogo from '../../assets/teamwork.png';
@@ -23,6 +24,8 @@ import gitLogo from '../../assets/git.png';
 import expressJsLogo from '../../assets/expressjs.png';
 import communicationLogo from '../../assets/communication.png';
 import timeManagementLogo from '../../assets/clock-48.png';
+
+
 
 // Motion variants for section and cards
 const sectionVariant = {
@@ -78,6 +81,7 @@ const Skills = () => {
       skills: [
         { name: 'JavaScript (ES6+)', percentage: 86, icon: javascriptLogo },
         { name: 'React.js', percentage: 86, icon: reactLogo },
+        { name: 'Next.js', percentage: 75, icon: nextjsLogo },
         { name: 'React Router', percentage: 87, icon: reactRouterLogo },
         { name: 'Tailwind CSS', percentage: 76, icon: tailwindcssLogo },
         { name: 'HTML5', percentage: 80, icon: htmlLogo },

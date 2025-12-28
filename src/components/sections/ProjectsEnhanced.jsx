@@ -1,10 +1,38 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaGithub, FaExternalLinkAlt, FaChevronLeft, FaChevronRight } from 'react-icons/fa';
+import OptimizedImage from '../ui/OptimizedImage';
 
 const projectsData = [
   {
     id: 1,
+    title: 'Digital Life Lessons',
+    category: 'Full Stack',
+    image:
+      'https://i.ibb.co/3Y8Z0ZCb/screencapture-digital-life-lessons-netlify-app-dashboard-admin-2025-12-23-19-43-05.png',
+    description:
+      'Digital Life Lessons is a full-stack (MERN) web application that allows users to share real-life experiences as meaningful lessons. Users can explore content using search, filters, and pagination, and engage through likes, comments, and favorites. The platform includes role-based access (Admin, Free & Premium users) with secure Stripe payment integration, focusing on community learning and personal growth.',
+    techStack: [
+      'React.js',
+      'Vite',
+      'Tailwind CSS',
+      'DaisyUI',
+      'Framer Motion',
+      'React Router',
+      'Firebase Authentication',
+      'Node.js',
+      'Express.js',
+      'MongoDB',
+      'Stripe Payment',
+    ],
+    liveLink: 'https://digital-life-lessons.netlify.app/',
+    gitHubClient:
+      'https://github.com/eistiakahmed/Digital_Life_Lessons_Frontend.git',
+    gitHubServer:
+      'https://github.com/eistiakahmed/Digital_Life_Lessons_Backend.git',
+  },
+  {
+    id: 2,
     title: 'Warm Paws',
     category: 'Frontend',
     image: 'https://i.ibb.co.com/mVS4gGn1/Screenshot-2025-12-06-024811.png',
@@ -15,7 +43,7 @@ const projectsData = [
     gitHubRepo: 'https://github.com/eistiakahmed/Warm-Paws.git',
   },
   {
-    id: 2,
+    id: 3,
     title: 'Fureverly',
     category: 'Full Stack',
     image: 'https://i.ibb.co.com/v6qDXWXX/Screenshot-2025-12-06-030605.png',
@@ -27,7 +55,7 @@ const projectsData = [
     gitHubServer: 'https://github.com/eistiakahmed/Fureverly-Server.git',
   },
   {
-    id: 3,
+    id: 4,
     title: 'Hero.IO',
     category: 'Frontend',
     image: 'https://i.ibb.co.com/svcKpBzB/Screenshot-2025-12-06-031256.png',
@@ -38,7 +66,7 @@ const projectsData = [
     gitHubRepo: 'https://github.com/eistiakahmed/Hero-IO.git',
   },
   {
-    id: 4,
+    id: 5,
     title: 'BongoCart',
     category: 'Full Stack',
     image: 'https://i.ibb.co.com/jkMSVMCM/Screenshot-2025-12-06-032224.png',
@@ -50,7 +78,7 @@ const projectsData = [
     gitHubServer: 'https://github.com/eistiakahmed/bongo-cart-backend.git',
   },
   {
-    id: 5,
+    id: 6,
     title: 'Taxi Kitchen',
     category: 'Frontend',
     image: 'https://i.ibb.co.com/N2cpbTqg/Screenshot-2025-12-06-032938.png',
@@ -61,7 +89,7 @@ const projectsData = [
     gitHubRepo: 'https://github.com/eistiakahmed/taxi-kitchen.git',
   },
   {
-    id: 6,
+    id: 7,
     title: 'Emergency Service',
     category: 'Frontend',
     image: 'https://i.ibb.co.com/zVdNB1Rk/Screenshot-2025-12-06-035110.png',
@@ -88,12 +116,10 @@ const ProjectCard = ({ project, index }) => {
     >
       {/* Image Container */}
       <div className="relative h-56 overflow-hidden">
-        <motion.img
+        <OptimizedImage
           src={project.image}
           alt={project.title}
-          className="w-full h-full object-cover"
-          whileHover={{ scale: 1.1 }}
-          transition={{ duration: 0.6, ease: 'easeOut' }}
+          className="w-full h-full"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
         
@@ -336,10 +362,10 @@ const ProjectsEnhanced = () => {
                       className="bg-white dark:bg-gray-800 rounded-2xl shadow-2xl overflow-hidden"
                     >
                       <div className="relative h-96">
-                        <img
+                        <OptimizedImage
                           src={filteredProjects[currentIndex].image}
                           alt={filteredProjects[currentIndex].title}
-                          className="w-full h-full object-cover"
+                          className="w-full h-full"
                         />
                         <div className="absolute top-4 right-4 px-4 py-2 bg-blue-600/90 backdrop-blur-sm text-white text-sm font-semibold rounded-full">
                           {filteredProjects[currentIndex].category}
