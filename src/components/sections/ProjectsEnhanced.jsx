@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { FaGithub, FaExternalLinkAlt, FaChevronLeft, FaChevronRight } from 'react-icons/fa';
+import React, { useState, useMemo } from 'react';
+import { motion } from 'framer-motion';
+import { FaGithub, FaExternalLinkAlt, FaProjectDiagram, FaCode } from 'react-icons/fa';
 import OptimizedImage from '../ui/OptimizedImage';
 
 const projectsData = [
@@ -121,7 +121,7 @@ const ProjectCard = ({ project, index }) => {
           alt={project.title}
           className="w-full h-full"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
+        <div className="absolute inset-0 bg-linear-to-t from-black/60 via-black/20 to-transparent" />
         
         {/* Category Badge */}
         <div className="absolute top-4 right-4">
@@ -165,7 +165,7 @@ const ProjectCard = ({ project, index }) => {
               href={project.liveLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-1.5 px-4 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white text-sm font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all shadow-md"
+              className="flex items-center gap-1.5 px-4 py-2 bg-linear-to-r from-blue-600 to-purple-600 text-white text-sm font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all shadow-md"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
@@ -233,33 +233,30 @@ const ProjectCard = ({ project, index }) => {
 
 const ProjectsEnhanced = () => {
   const [filter, setFilter] = useState('All');
-  const [currentIndex, setCurrentIndex] = useState(0);
 
-  const filteredProjects =
-    filter === 'All'
+  // Calculate project counts
+  const projectCounts = useMemo(() => {
+    const totalProjects = projectsData.length;
+    const frontendProjects = projectsData.filter(p => p.category === 'Frontend').length;
+    const fullStackProjects = projectsData.filter(p => p.category === 'Full Stack').length;
+    
+    return {
+      total: totalProjects,
+      frontend: frontendProjects,
+      fullStack: fullStackProjects
+    };
+  }, []);
+
+  const filteredProjects = useMemo(() => {
+    return filter === 'All'
       ? projectsData
       : projectsData.filter((p) => p.category === filter);
-
-  const nextSlide = () => {
-    setCurrentIndex((prev) => (prev + 1) % filteredProjects.length);
-  };
-
-  const prevSlide = () => {
-    setCurrentIndex(
-      (prev) => (prev - 1 + filteredProjects.length) % filteredProjects.length
-    );
-  };
-
-  React.useEffect(() => {
-    setCurrentIndex(0);
   }, [filter]);
-
-  const showGrid = filter !== 'All';
 
   return (
     <section
       id="projects"
-      className="w-full min-h-screen py-16 px-4 sm:px-8 bg-gradient-to-br from-gray-50 via-white to-gray-50 dark:from-gray-900 dark:via-black dark:to-gray-900"
+      className="w-full min-h-screen py-16 px-4 sm:px-8 bg-linear-to-br from-gray-50 via-white to-gray-50 dark:from-gray-900 dark:via-black dark:to-gray-900"
     >
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
@@ -280,11 +277,68 @@ const ProjectsEnhanced = () => {
             Portfolio
           </motion.span>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
-            Featured Projects
+            My Projects
           </h2>
           <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
             A showcase of my recent work and side projects
           </p>
+        </motion.div>
+
+        {/* Project Statistics */}
+        <motion.div
+          className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-12"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+        >
+          <motion.div
+            className="bg-white dark:bg-gray-800 rounded-xl p-6 text-center shadow-lg border border-gray-200 dark:border-gray-700"
+            whileHover={{ scale: 1.05 }}
+            transition={{ type: 'spring', stiffness: 300 }}
+          >
+            <div className="w-12 h-12 bg-linear-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-3">
+              <FaProjectDiagram className="w-6 h-6 text-white" />
+            </div>
+            <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-1">
+              {projectCounts.total}
+            </h3>
+            <p className="text-gray-600 dark:text-gray-400 text-sm">
+              Total Projects
+            </p>
+          </motion.div>
+
+          <motion.div
+            className="bg-white dark:bg-gray-800 rounded-xl p-6 text-center shadow-lg border border-gray-200 dark:border-gray-700"
+            whileHover={{ scale: 1.05 }}
+            transition={{ type: 'spring', stiffness: 300 }}
+          >
+            <div className="w-12 h-12 bg-linear-to-r from-green-600 to-teal-600 rounded-lg flex items-center justify-center mx-auto mb-3">
+              <FaCode className="w-6 h-6 text-white" />
+            </div>
+            <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-1">
+              {projectCounts.frontend}
+            </h3>
+            <p className="text-gray-600 dark:text-gray-400 text-sm">
+              Frontend Projects
+            </p>
+          </motion.div>
+
+          <motion.div
+            className="bg-white dark:bg-gray-800 rounded-xl p-6 text-center shadow-lg border border-gray-200 dark:border-gray-700"
+            whileHover={{ scale: 1.05 }}
+            transition={{ type: 'spring', stiffness: 300 }}
+          >
+            <div className="w-12 h-12 bg-linear-to-r from-orange-600 to-red-600 rounded-lg flex items-center justify-center mx-auto mb-3">
+              <FaGithub className="w-6 h-6 text-white" />
+            </div>
+            <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-1">
+              {projectCounts.fullStack}
+            </h3>
+            <p className="text-gray-600 dark:text-gray-400 text-sm">
+              Full Stack Projects
+            </p>
+          </motion.div>
         </motion.div>
 
         {/* Filter Buttons */}
@@ -301,197 +355,41 @@ const ProjectsEnhanced = () => {
               onClick={() => setFilter(cat)}
               className={`px-6 py-2.5 text-sm font-semibold rounded-full transition-all ${
                 filter === cat
-                  ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg'
+                  ? 'bg-linear-to-r from-blue-600 to-purple-600 text-white shadow-lg'
                   : 'bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 border border-gray-200 dark:border-gray-700'
               }`}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              {cat}
+              {cat} {cat !== 'All' && `(${cat === 'Frontend' ? projectCounts.frontend : projectCounts.fullStack})`}
             </motion.button>
           ))}
         </motion.div>
 
-        <AnimatePresence mode="wait">
-          {showGrid ? (
-            /* Grid Layout for Filtered Projects */
-            <motion.div
-              key="grid"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.5 }}
-              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-            >
-              {filteredProjects.map((project, index) => (
-                <ProjectCard key={project.id} project={project} index={index} />
-              ))}
-            </motion.div>
-          ) : (
-            /* Carousel for All Projects */
-            <motion.div
-              key="carousel"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.5 }}
-              className="relative"
-            >
-              <div className="flex items-center justify-center gap-8 overflow-hidden min-h-[600px]">
-                {/* Prev Button */}
-                <div className="absolute left-0 top-1/2 -translate-y-1/2 z-10 hidden lg:block">
-                  <motion.button
-                    onClick={prevSlide}
-                    className="w-12 h-12 rounded-full bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm flex items-center justify-center text-gray-800 dark:text-white hover:bg-white dark:hover:bg-gray-700 transition-colors shadow-xl border border-gray-200 dark:border-gray-700"
-                    whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.9 }}
-                  >
-                    <FaChevronLeft className="w-5 h-5" />
-                  </motion.button>
-                </div>
+        {/* Projects Grid */}
+        <motion.div
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5 }}
+        >
+          {filteredProjects.map((project, index) => (
+            <ProjectCard key={project.id} project={project} index={index} />
+          ))}
+        </motion.div>
 
-                {/* Project Card */}
-                <div className="relative w-full max-w-3xl">
-                  <AnimatePresence mode="wait">
-                    <motion.div
-                      key={filteredProjects[currentIndex].id}
-                      initial={{ opacity: 0, x: 100 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      exit={{ opacity: 0, x: -100 }}
-                      transition={{ duration: 0.5 }}
-                      className="bg-white dark:bg-gray-800 rounded-2xl shadow-2xl overflow-hidden"
-                    >
-                      <div className="relative h-96">
-                        <OptimizedImage
-                          src={filteredProjects[currentIndex].image}
-                          alt={filteredProjects[currentIndex].title}
-                          className="w-full h-full"
-                        />
-                        <div className="absolute top-4 right-4 px-4 py-2 bg-blue-600/90 backdrop-blur-sm text-white text-sm font-semibold rounded-full">
-                          {filteredProjects[currentIndex].category}
-                        </div>
-                      </div>
-                      <div className="p-8">
-                        <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-3">
-                          {filteredProjects[currentIndex].title}
-                        </h3>
-                        <p className="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed">
-                          {filteredProjects[currentIndex].description}
-                        </p>
-                        
-                        <div className="mb-6">
-                          <p className="text-xs font-semibold uppercase text-gray-500 dark:text-gray-400 mb-3 tracking-wider">
-                            Tech Stack
-                          </p>
-                          <div className="flex flex-wrap gap-2">
-                            {filteredProjects[currentIndex].techStack.map((tech, i) => (
-                              <span
-                                key={i}
-                                className="px-3 py-1.5 bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-300 text-sm rounded-lg"
-                              >
-                                {tech}
-                              </span>
-                            ))}
-                          </div>
-                        </div>
-
-                        <div className="flex flex-wrap gap-3">
-                          {filteredProjects[currentIndex].liveLink && (
-                            <motion.a
-                              href={filteredProjects[currentIndex].liveLink}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all shadow-lg"
-                              whileHover={{ scale: 1.05 }}
-                              whileTap={{ scale: 0.95 }}
-                            >
-                              <FaExternalLinkAlt className="w-4 h-4" />
-                              <span>Live Demo</span>
-                            </motion.a>
-                          )}
-
-                          {filteredProjects[currentIndex].category === 'Full Stack' ? (
-                            <>
-                              {filteredProjects[currentIndex].gitHubClient && (
-                                <motion.a
-                                  href={filteredProjects[currentIndex].gitHubClient}
-                                  target="_blank"
-                                  rel="noopener noreferrer"
-                                  className="flex items-center gap-2 px-6 py-3 bg-gray-800 dark:bg-gray-700 text-white font-semibold rounded-lg hover:bg-gray-900 dark:hover:bg-gray-600 transition-all"
-                                  whileHover={{ scale: 1.05 }}
-                                  whileTap={{ scale: 0.95 }}
-                                >
-                                  <FaGithub className="w-4 h-4" />
-                                  <span>Client Code</span>
-                                </motion.a>
-                              )}
-                              {filteredProjects[currentIndex].gitHubServer && (
-                                <motion.a
-                                  href={filteredProjects[currentIndex].gitHubServer}
-                                  target="_blank"
-                                  rel="noopener noreferrer"
-                                  className="flex items-center gap-2 px-6 py-3 bg-gray-800 dark:bg-gray-700 text-white font-semibold rounded-lg hover:bg-gray-900 dark:hover:bg-gray-600 transition-all"
-                                  whileHover={{ scale: 1.05 }}
-                                  whileTap={{ scale: 0.95 }}
-                                >
-                                  <FaGithub className="w-4 h-4" />
-                                  <span>Server Code</span>
-                                </motion.a>
-                              )}
-                            </>
-                          ) : (
-                            filteredProjects[currentIndex].gitHubRepo && (
-                              <motion.a
-                                href={filteredProjects[currentIndex].gitHubRepo}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="flex items-center gap-2 px-6 py-3 bg-gray-800 dark:bg-gray-700 text-white font-semibold rounded-lg hover:bg-gray-900 dark:hover:bg-gray-600 transition-all"
-                                whileHover={{ scale: 1.05 }}
-                                whileTap={{ scale: 0.95 }}
-                              >
-                                <FaGithub className="w-4 h-4" />
-                                <span>GitHub</span>
-                              </motion.a>
-                            )
-                          )}
-                        </div>
-                      </div>
-                    </motion.div>
-                  </AnimatePresence>
-                </div>
-
-                {/* Next Button */}
-                <div className="absolute right-0 top-1/2 -translate-y-1/2 z-10 hidden lg:block">
-                  <motion.button
-                    onClick={nextSlide}
-                    className="w-12 h-12 rounded-full bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm flex items-center justify-center text-gray-800 dark:text-white hover:bg-white dark:hover:bg-gray-700 transition-colors shadow-xl border border-gray-200 dark:border-gray-700"
-                    whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.9 }}
-                  >
-                    <FaChevronRight className="w-5 h-5" />
-                  </motion.button>
-                </div>
-              </div>
-
-              {/* Indicators */}
-              <div className="flex justify-center items-center gap-2 mt-8">
-                {filteredProjects.map((_, idx) => (
-                  <motion.button
-                    key={idx}
-                    onClick={() => setCurrentIndex(idx)}
-                    className={`h-2 rounded-full transition-all ${
-                      idx === currentIndex
-                        ? 'w-8 bg-gradient-to-r from-blue-600 to-purple-600'
-                        : 'w-2 bg-gray-300 dark:bg-gray-700 hover:bg-gray-400 dark:hover:bg-gray-600'
-                    }`}
-                    whileHover={{ scale: 1.2 }}
-                    whileTap={{ scale: 0.9 }}
-                  />
-                ))}
-              </div>
-            </motion.div>
-          )}
-        </AnimatePresence>
+        {/* Showing results count */}
+        <motion.div
+          className="text-center mt-12"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+        >
+          <p className="text-gray-600 dark:text-gray-400">
+            Showing {filteredProjects.length} of {projectCounts.total} projects
+            {filter !== 'All' && ` in ${filter}`}
+          </p>
+        </motion.div>
       </div>
     </section>
   );

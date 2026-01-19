@@ -3,9 +3,9 @@ import { motion } from 'framer-motion';
 
 // Import logos
 import javascriptLogo from '../../assets/javascript-48.png';
-import reactRouterLogo from '../../assets/React-Router.png';
+import reactRouterLogo from '../../assets/react-router-svgrepo-com.svg';
 import reactLogo from '../../assets/react.png';
-import nextjsLogo from '../../assets/icons8-nextjs-48.png';
+import nextjsLogo from '../../assets/next.js.png';
 import vscodeLogo from '../../assets/vscode.png';
 import vercelLogo from '../../assets/vercel.png';
 import teamworkLogo from '../../assets/teamwork.png';
@@ -19,9 +19,11 @@ import mongodbLogo from '../../assets/mongodb.png';
 import JWTLogo from '../../assets/jwt-48.png';
 import htmlLogo from '../../assets/html.png';
 import cssLogo from '../../assets/css.png';
+import motionLogo from '../../assets/motion.png'
 import firebaseLogo from '../../assets/firebase.png';
 import gitLogo from '../../assets/git.png';
 import expressJsLogo from '../../assets/expressjs.png';
+import tanStackLogo from '../../assets/tanStack.png';
 import communicationLogo from '../../assets/communication.png';
 import timeManagementLogo from '../../assets/clock-48.png';
 
@@ -81,11 +83,12 @@ const Skills = () => {
       skills: [
         { name: 'JavaScript (ES6+)', percentage: 86, icon: javascriptLogo },
         { name: 'React.js', percentage: 86, icon: reactLogo },
-        { name: 'Next.js', percentage: 75, icon: nextjsLogo },
+        { name: 'Next.js', percentage: 57, icon: nextjsLogo },
         { name: 'React Router', percentage: 87, icon: reactRouterLogo },
         { name: 'Tailwind CSS', percentage: 76, icon: tailwindcssLogo },
         { name: 'HTML5', percentage: 80, icon: htmlLogo },
         { name: 'CSS3', percentage: 78, icon: cssLogo },
+        { name: 'TanStack Query', percentage: 50, icon: tanStackLogo },
       ],
     },
     {
@@ -110,13 +113,14 @@ const Skills = () => {
         { name: 'Notion', percentage: 50, icon: notionLogo },
         { name: 'Netlify', percentage: 88, icon: netlifyLogo },
         { name: 'Vercel', percentage: 87, icon: vercelLogo },
+        { name: 'Framer Motion', percentage: 87, icon: motionLogo },
       ],
     },
     {
       title: 'Soft Skills',
       color: 'bg-purple-500',
       skills: [
-        { name: 'Problem Solving', percentage: 93, icon: problemSolvingLog },
+        { name: 'Problem Solving', percentage: 63, icon: problemSolvingLog },
         { name: 'Teamwork', percentage: 90, icon: teamworkLogo },
         { name: 'Time Management', percentage: 88, icon: timeManagementLogo },
         { name: 'Communication', percentage: 91, icon: communicationLogo },
