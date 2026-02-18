@@ -1,13 +1,5 @@
 import React from 'react';
-import {
-  Code,
-  Briefcase,
-  Mail,
-  Smartphone,
-  Monitor,
-  Database,
-  GraduationCap,
-} from 'lucide-react';
+import { Smartphone, Monitor, Database, GraduationCap } from 'lucide-react';
 import { motion } from 'framer-motion';
 import githubLogo from '../../assets/github.png';
 import linkedinLogo from '../../assets/linkedin.png';
@@ -31,14 +23,14 @@ const About = () => {
             >
               <div className="flex flex-col gap-6">
                 <div className="flex flex-col items-center gap-4 text-center">
-                  <div
-                    className="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-32 border-4 border-primary shadow-md"
-                    style={{
-                      backgroundImage:
-                        'url("https://i.ibb.co.com/wF1xjPg9/1763497093402.jpg")',
-                    }}
-                  ></div>
-                  <div className="flex flex-col">
+                  <div className="flex flex-col justify-center items-center">
+                    <div className="mb-2 border-5 rounded-full">
+                      <img
+                        src="https://i.ibb.co.com/BMx6Q9c/eistiak-ahmed.png"
+                        alt="eistiak_ahmed"
+                        className="w-[120px] h-[120px] rounded-full"
+                      />
+                    </div>
                     <h1 className="text-gray-900 dark:text-white text-xl font-bold leading-tight">
                       Eistiak Ahmed
                     </h1>

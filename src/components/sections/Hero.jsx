@@ -88,7 +88,7 @@ const Hero = () => {
               </p>
             </motion.div>
 
-            <motion.div variants={itemVariants} className="mb-6">
+            <motion.div variants={itemVariants} className="mb-6 flex justify-center lg:justify-start">
               <Typewriter
                 roles={[
                   'Junior Frontend Developer',
