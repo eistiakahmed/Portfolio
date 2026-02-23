@@ -4,8 +4,9 @@ import { FaGithub, FaExternalLinkAlt, FaProjectDiagram, FaCode } from 'react-ico
 import { Sparkles, Layers, Zap, ExternalLink, Code2, Rocket, TrendingUp } from 'lucide-react';
 import OptimizedImage from '../ui/OptimizedImage';
 import useProjects from '../../hooks/useProjects';
+import ProjectCard from '../ui/ProjectCard';
 
-const ProjectCard = ({ project, index }) => {
+const ProjectCardOld = ({ project, index }) => {
   const [isHovered, setIsHovered] = useState(false);
 
   return (

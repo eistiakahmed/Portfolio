@@ -32,16 +32,20 @@ export default defineConfig({
     }
   },
   
-  // Optimize dev server
+  // Optimize dev server - FIXED FOR BETTER HMR
   server: {
     hmr: {
-      overlay: false // Disable error overlay for better performance
+      overlay: true // Enable error overlay to see issues immediately
+    },
+    // Force page reload on certain file changes
+    watch: {
+      usePolling: true, // Use polling for better file change detection
     }
   },
   
   // Enable CSS code splitting
   css: {
-    devSourcemap: false // Disable CSS source maps in dev for better performance
+    devSourcemap: true // Enable CSS source maps for debugging
   },
   
   // Optimize dependencies
@@ -53,6 +57,8 @@ export default defineConfig({
       'react-icons',
       'react-toastify',
       'react-share'
-    ]
+    ],
+    // Force re-optimization on every start
+    force: false
   }
 });

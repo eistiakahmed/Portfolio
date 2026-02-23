@@ -70,7 +70,7 @@ const ProjectCard = ({ project, index }) => {
                     href={project.liveLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-1.5 px-4 py-2 bg-linear-to-r from-blue-600 to-purple-600 text-white rounded-lg text-xs font-bold shadow-xl backdrop-blur-sm"
+                    className="flex items-center justify-center gap-1.5 px-3 py-2 bg-linear-to-r from-blue-600 to-purple-600 text-white rounded-lg text-xs font-bold shadow-xl backdrop-blur-sm min-w-[90px]"
                     initial={{ y: 20, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
                     transition={{ delay: 0.1 }}
@@ -78,7 +78,7 @@ const ProjectCard = ({ project, index }) => {
                     whileTap={{ scale: 0.95 }}
                   >
                     <ExternalLink className="w-3.5 h-3.5" />
-                    Live Demo
+                    Live
                   </motion.a>
                 )}
                 
@@ -90,7 +90,7 @@ const ProjectCard = ({ project, index }) => {
                         href={project.gitHubClient}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center gap-1 px-3 py-2 bg-gray-900/90 text-white rounded-lg text-xs font-bold shadow-xl backdrop-blur-sm border border-gray-700"
+                        className="flex items-center justify-center gap-1 px-3 py-2 bg-gray-900/90 text-white rounded-lg text-xs font-bold shadow-xl backdrop-blur-sm border border-gray-700 min-w-[90px]"
                         initial={{ y: 20, opacity: 0 }}
                         animate={{ y: 0, opacity: 1 }}
                         transition={{ delay: 0.15 }}
@@ -106,7 +106,7 @@ const ProjectCard = ({ project, index }) => {
                         href={project.gitHubServer}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center gap-1 px-3 py-2 bg-gray-900/90 text-white rounded-lg text-xs font-bold shadow-xl backdrop-blur-sm border border-gray-700"
+                        className="flex items-center justify-center gap-1 px-3 py-2 bg-gray-900/90 text-white rounded-lg text-xs font-bold shadow-xl backdrop-blur-sm border border-gray-700 min-w-[90px]"
                         initial={{ y: 20, opacity: 0 }}
                         animate={{ y: 0, opacity: 1 }}
                         transition={{ delay: 0.2 }}
@@ -126,7 +126,7 @@ const ProjectCard = ({ project, index }) => {
                     href={project.gitHubRepo}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-1.5 px-4 py-2 bg-gray-900/90 text-white rounded-lg text-xs font-bold shadow-xl backdrop-blur-sm border border-gray-700"
+                    className="flex items-center justify-center gap-1.5 px-3 py-2 bg-gray-900/90 text-white rounded-lg text-xs font-bold shadow-xl backdrop-blur-sm border border-gray-700 min-w-[90px]"
                     initial={{ y: 20, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
                     transition={{ delay: 0.15 }}
@@ -134,7 +134,7 @@ const ProjectCard = ({ project, index }) => {
                     whileTap={{ scale: 0.95 }}
                   >
                     <Github className="w-3.5 h-3.5" />
-                    View Code
+                    Code
                   </motion.a>
                 )}
               </motion.div>
@@ -191,11 +191,11 @@ const ProjectCard = ({ project, index }) => {
           </motion.p>
 
           {/* Tech Stack */}
-          <div className="flex flex-wrap gap-2">
+          <div className="flex items-center gap-2 overflow-x-auto scrollbar-hide">
             {project.techStack && project.techStack.slice(0, 3).map((tech, i) => (
               <motion.span
                 key={i}
-                className="px-3 py-1 bg-linear-to-r from-gray-100 to-gray-200 dark:from-gray-700 dark:to-gray-600 text-gray-700 dark:text-gray-300 text-xs rounded-lg font-medium shadow-sm"
+                className="px-3 py-1 bg-linear-to-r from-gray-100 to-gray-200 dark:from-gray-700 dark:to-gray-600 text-gray-700 dark:text-gray-300 text-xs rounded-lg font-medium shadow-sm whitespace-nowrap shrink-0"
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
@@ -212,7 +212,7 @@ const ProjectCard = ({ project, index }) => {
             ))}
             {project.techStack && project.techStack.length > 3 && (
               <motion.span
-                className="px-3 py-1 bg-linear-to-r from-blue-100 to-purple-100 dark:from-blue-900/40 dark:to-purple-900/40 text-blue-700 dark:text-blue-400 text-xs rounded-lg font-bold shadow-sm border border-blue-200 dark:border-blue-800"
+                className="px-3 py-1 bg-linear-to-r from-blue-100 to-purple-100 dark:from-blue-900/40 dark:to-purple-900/40 text-blue-700 dark:text-blue-400 text-xs rounded-lg font-bold shadow-sm border border-blue-200 dark:border-blue-800 whitespace-nowrap shrink-0"
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}

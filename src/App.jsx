@@ -42,7 +42,7 @@ function App() {
   return (
     <ErrorBoundary>
       <AnimatePresence mode="wait">
-      <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:from-gray-900 dark:via-black dark:to-gray-900 transition-colors duration-500 relative overflow-hidden">
+      <div className="min-h-screen bg-linear-to-br from-gray-50 via-white to-gray-100 dark:from-gray-900 dark:via-black dark:to-gray-900 transition-colors duration-500 relative overflow-hidden">
         {/* Lazy load non-critical UI components */}
         <Suspense fallback={null}>
           <CustomCursor />
