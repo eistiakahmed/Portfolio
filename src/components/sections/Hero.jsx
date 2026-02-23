@@ -1,13 +1,15 @@
-import React, { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { ArrowRight, Download, Zap, Palette, Sparkles } from 'lucide-react';
 import { motion, useInView } from 'framer-motion';
 import gsap from 'gsap';
 import Typewriter from '../ui/Typewriter';
+import ResumeDownloadModal from '../ui/ResumeDownloadModal';
 
 const Hero = () => {
   const titleRef = useRef(null);
   const sectionRef = useRef(null);
   const isInView = useInView(sectionRef, { once: true, amount: 0.3 });
+  const [isResumeModalOpen, setIsResumeModalOpen] = useState(false);
 
   useEffect(() => {
     if (titleRef.current) {
@@ -58,8 +60,8 @@ const Hero = () => {
       ref={sectionRef}
       className="relative pt-20 pb-16 lg:pt-32 lg:pb-24 overflow-hidden"
     >
-      {/* Animated linear background */}
-      <div className="absolute inset-0 bg-linear-to-br from-blue-50 via-purple-50 to-pink-50 dark:from-blue-950/20 dark:via-purple-950/20 dark:to-pink-950/20 opacity-50" />
+      {/* Gradient Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-br from-blue-50/80 via-purple-50/80 to-pink-50/80 dark:from-blue-950/40 dark:via-purple-950/40 dark:to-pink-950/40" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
@@ -192,16 +194,15 @@ const Hero = () => {
               </motion.a>
 
               {/* Download Resume Button */}
-              <motion.a
-                href="/Eistiak_Ahmed_Frontend_Resume.pdf"
-                download="Eistiak_Ahmed_Frontend_Resume.pdf"
+              <motion.button
+                onClick={() => setIsResumeModalOpen(true)}
                 className="group inline-flex items-center justify-center gap-2 px-8 py-3 bg-white dark:bg-gray-800 border-2 border-gray-300 dark:border-gray-700 text-gray-800 dark:text-gray-300 font-semibold rounded-lg shadow-md relative overflow-hidden"
                 whileHover={{ scale: 1.05, borderColor: '#3b82f6' }}
                 whileTap={{ scale: 0.95 }}
               >
                 <Download className="h-5 w-5 group-hover:animate-bounce" />
                 <span>Download Resume</span>
-              </motion.a>
+              </motion.button>
             </motion.div>
           </motion.div>
 
@@ -323,6 +324,12 @@ const Hero = () => {
           </motion.div>
         </div>
       </div>
+
+      {/* Resume Download Modal */}
+      <ResumeDownloadModal 
+        isOpen={isResumeModalOpen}
+        onClose={() => setIsResumeModalOpen(false)}
+      />
     </section>
   );
 };

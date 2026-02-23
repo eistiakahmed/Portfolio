@@ -83,7 +83,7 @@ const Navbar = () => {
           transition={{ type: 'spring', stiffness: 400 }}
         >
           <motion.div
-            className="bg-gradient-to-br from-blue-600 to-purple-600 p-2 rounded-lg shadow-lg"
+            className="bg-linear-to-br from-blue-600 to-purple-600 p-2 rounded-lg shadow-lg"
             animate={{
               rotate: [0, 10, -10, 0],
             }}
@@ -95,7 +95,7 @@ const Navbar = () => {
           >
             <FaBolt className="h-6 w-6 text-white" />
           </motion.div>
-          <span className="text-xl font-bold bg-gradient-to-r from-gray-900 to-gray-700 dark:from-white dark:to-gray-300 text-transparent bg-clip-text">
+          <span className="text-xl font-bold bg-linear-to-r from-gray-900 to-gray-700 dark:from-white dark:to-gray-300 text-transparent bg-clip-text">
             Eistiak Ahmed
           </span>
         </motion.div>
@@ -129,7 +129,7 @@ const Navbar = () => {
                   />
                 )}
                 <motion.div
-                  className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-blue-600 to-purple-600"
+                  className="absolute bottom-0 left-0 right-0 h-0.5 bg-linear-to-r from-blue-600 to-purple-600"
                   initial={{ scaleX: 0 }}
                   whileHover={{ scaleX: 1 }}
                   transition={{ duration: 0.3 }}
@@ -145,7 +145,7 @@ const Navbar = () => {
           <div className="relative">
             <motion.button
               onClick={() => setIsSocialOpen(!isSocialOpen)}
-              className="relative p-2 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white transition-all focus:outline-none shadow-md hover:shadow-lg"
+              className="relative p-2 rounded-full bg-linear-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white transition-all focus:outline-none shadow-md hover:shadow-lg"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
               aria-label="Social Links"
@@ -251,7 +251,7 @@ const Navbar = () => {
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: index * 0.1 }}
-                  className="block px-4 py-3 text-base font-medium text-gray-600 dark:text-gray-300 hover:bg-gradient-to-r hover:from-blue-50 hover:to-purple-50 dark:hover:from-blue-900/20 dark:hover:to-purple-900/20 hover:text-blue-600 dark:hover:text-blue-400 rounded-lg transition-all"
+                  className="block px-4 py-3 text-base font-medium text-gray-600 dark:text-gray-300 hover:bg-linear-to-r hover:from-blue-50 hover:to-purple-50 dark:hover:from-blue-900/20 dark:hover:to-purple-900/20 hover:text-blue-600 dark:hover:text-blue-400 rounded-lg transition-all"
                   onClick={() => setIsMenuOpen(false)}
                   whileHover={{ x: 5 }}
                 >

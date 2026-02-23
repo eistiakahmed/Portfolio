@@ -1,18 +1,25 @@
 import { useState, useEffect, useCallback, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FaBolt, FaGithub, FaLinkedin, FaTwitter, FaEnvelope, FaShare } from 'react-icons/fa';
+import {
+  FaBolt,
+  FaGithub,
+  FaLinkedin,
+  FaTwitter,
+  FaEnvelope,
+  FaShare,
+} from 'react-icons/fa';
 import { HiMenu, HiX } from 'react-icons/hi';
-import { 
-  FacebookShareButton, 
-  TwitterShareButton, 
-  LinkedinShareButton, 
+import {
+  FacebookShareButton,
+  TwitterShareButton,
+  LinkedinShareButton,
   WhatsappShareButton,
   TelegramShareButton,
   FacebookIcon,
   TwitterIcon,
   LinkedinIcon,
   WhatsappIcon,
-  TelegramIcon
+  TelegramIcon,
 } from 'react-share';
 
 const NavbarOptimized = () => {
@@ -24,7 +31,10 @@ const NavbarOptimized = () => {
 
   // Memoize share URL and title
   const shareUrl = useMemo(() => window.location.href, []);
-  const shareTitle = useMemo(() => "Check out Eistiak Ahmed's Portfolio - Junior Frontend Developer", []);
+  const shareTitle = useMemo(
+    () => "Check out Eistiak Ahmed's Portfolio - Junior Frontend Developer",
+    []
+  );
 
   // Throttled scroll handler for better performance
   const handleScroll = useCallback(() => {
@@ -32,7 +42,15 @@ const NavbarOptimized = () => {
     setScrolled(scrollY > 20);
 
     // Optimized section detection
-    const sections = ['about', 'skills', 'experience', 'projects', 'certificates', 'github', 'contact'];
+    const sections = [
+      'about',
+      'skills',
+      'experience',
+      'projects',
+      'certificates',
+      'github',
+      'contact',
+    ];
     for (const section of sections) {
       const element = document.getElementById(section);
       if (element) {
@@ -47,7 +65,7 @@ const NavbarOptimized = () => {
 
   useEffect(() => {
     let ticking = false;
-    
+
     const throttledScroll = () => {
       if (!ticking) {
         requestAnimationFrame(() => {
@@ -63,42 +81,47 @@ const NavbarOptimized = () => {
   }, [handleScroll]);
 
   // Memoized social links
-  const socialLinks = useMemo(() => [
-    {
-      name: 'GitHub',
-      icon: FaGithub,
-      href: 'https://github.com/eistiakahmed',
-      color: 'hover:text-gray-900 dark:hover:text-white',
-    },
-    {
-      name: 'LinkedIn',
-      icon: FaLinkedin,
-      href: 'https://linkedin.com/in/eistiak-ahmed',
-      color: 'hover:text-blue-600',
-    },
-    {
-      name: 'Twitter',
-      icon: FaTwitter,
-      href: 'https://twitter.com/eistiakahmed',
-      color: 'hover:text-blue-400',
-    },
-    {
-      name: 'Email',
-      icon: FaEnvelope,
-      href: 'mailto:eistiakahmedmeraj@gmail.com',
-      color: 'hover:text-red-500',
-    },
-  ], []);
+  const socialLinks = useMemo(
+    () => [
+      {
+        name: 'GitHub',
+        icon: FaGithub,
+        href: 'https://github.com/eistiakahmed',
+        color: 'hover:text-gray-900 dark:hover:text-white',
+      },
+      {
+        name: 'LinkedIn',
+        icon: FaLinkedin,
+        href: 'https://linkedin.com/in/eistiak-ahmed',
+        color: 'hover:text-blue-600',
+      },
+      {
+        name: 'Twitter',
+        icon: FaTwitter,
+        href: 'https://twitter.com/eistiakahmed',
+        color: 'hover:text-blue-400',
+      },
+      {
+        name: 'Email',
+        icon: FaEnvelope,
+        href: 'mailto:eistiakahmedmeraj@gmail.com',
+        color: 'hover:text-red-500',
+      },
+    ],
+    []
+  );
 
-  const navLinks = useMemo(() => [
-    { name: 'About', href: '#about' },
-    { name: 'Skills', href: '#skills' },
-    { name: 'Experience', href: '#experience' },
-    { name: 'Projects', href: '#projects' },
-    { name: 'Certificates', href: '#certificates' },
-    { name: 'GitHub', href: '#github' },
-    { name: 'Contact', href: '#contact' },
-  ], []);
+  const navLinks = useMemo(
+    () => [
+      { name: 'About', href: '#about' },
+      { name: 'Skills', href: '#skills' },
+      { name: 'Experience', href: '#experience' },
+      { name: 'Projects', href: '#projects' },
+      { name: 'Certificates', href: '#certificates' },
+      { name: 'Contact', href: '#contact' },
+    ],
+    []
+  );
 
   // Close dropdowns when clicking outside
   const closeDropdowns = useCallback(() => {
@@ -125,7 +148,7 @@ const NavbarOptimized = () => {
           transition={{ type: 'spring', stiffness: 400 }}
         >
           <motion.div
-            className="bg-gradient-to-br from-blue-600 to-purple-600 p-2 rounded-lg shadow-lg"
+            className="bg-linear-to-br from-blue-600 to-purple-600 p-2 rounded-lg shadow-lg"
             animate={{
               rotate: [0, 10, -10, 0],
             }}
@@ -137,7 +160,7 @@ const NavbarOptimized = () => {
           >
             <FaBolt className="h-6 w-6 text-white" />
           </motion.div>
-          <span className="text-xl font-bold bg-gradient-to-r from-gray-900 to-gray-700 dark:from-white dark:to-gray-300 text-transparent bg-clip-text">
+          <span className="text-xl font-bold bg-linear-to-r from-gray-900 to-gray-700 dark:from-white dark:to-gray-300 text-transparent bg-clip-text">
             Eistiak Ahmed
           </span>
         </motion.div>
@@ -171,7 +194,7 @@ const NavbarOptimized = () => {
                   />
                 )}
                 <motion.div
-                  className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-blue-600 to-purple-600"
+                  className="absolute bottom-0 left-0 right-0 h-0.5 bg-linear-to-r from-blue-600 to-purple-600"
                   initial={{ scaleX: 0 }}
                   whileHover={{ scaleX: 1 }}
                   transition={{ duration: 0.3 }}
@@ -187,7 +210,7 @@ const NavbarOptimized = () => {
           <div className="relative">
             <motion.button
               onClick={() => setIsShareOpen(!isShareOpen)}
-              className="relative p-2 rounded-full bg-gradient-to-r from-green-600 to-teal-600 hover:from-green-700 hover:to-teal-700 text-white transition-all focus:outline-none shadow-md hover:shadow-lg"
+              className="relative p-2 rounded-full bg-linear-to-r from-green-600 to-teal-600 hover:from-green-700 hover:to-teal-700 text-white transition-all focus:outline-none shadow-md hover:shadow-lg"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
               aria-label="Share Portfolio"
@@ -206,7 +229,7 @@ const NavbarOptimized = () => {
                     className="fixed inset-0 z-40"
                     onClick={closeDropdowns}
                   />
-                  
+
                   <motion.div
                     initial={{ opacity: 0, scale: 0.95, y: -10 }}
                     animate={{ opacity: 1, scale: 1, y: 0 }}
@@ -220,31 +243,46 @@ const NavbarOptimized = () => {
                       </p>
                       <div className="grid grid-cols-5 gap-2">
                         <FacebookShareButton url={shareUrl} quote={shareTitle}>
-                          <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+                          <motion.div
+                            whileHover={{ scale: 1.1 }}
+                            whileTap={{ scale: 0.9 }}
+                          >
                             <FacebookIcon size={32} round />
                           </motion.div>
                         </FacebookShareButton>
-                        
+
                         <TwitterShareButton url={shareUrl} title={shareTitle}>
-                          <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+                          <motion.div
+                            whileHover={{ scale: 1.1 }}
+                            whileTap={{ scale: 0.9 }}
+                          >
                             <TwitterIcon size={32} round />
                           </motion.div>
                         </TwitterShareButton>
-                        
+
                         <LinkedinShareButton url={shareUrl} title={shareTitle}>
-                          <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+                          <motion.div
+                            whileHover={{ scale: 1.1 }}
+                            whileTap={{ scale: 0.9 }}
+                          >
                             <LinkedinIcon size={32} round />
                           </motion.div>
                         </LinkedinShareButton>
-                        
+
                         <WhatsappShareButton url={shareUrl} title={shareTitle}>
-                          <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+                          <motion.div
+                            whileHover={{ scale: 1.1 }}
+                            whileTap={{ scale: 0.9 }}
+                          >
                             <WhatsappIcon size={32} round />
                           </motion.div>
                         </WhatsappShareButton>
-                        
+
                         <TelegramShareButton url={shareUrl} title={shareTitle}>
-                          <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+                          <motion.div
+                            whileHover={{ scale: 1.1 }}
+                            whileTap={{ scale: 0.9 }}
+                          >
                             <TelegramIcon size={32} round />
                           </motion.div>
                         </TelegramShareButton>
@@ -260,7 +298,7 @@ const NavbarOptimized = () => {
           <div className="relative">
             <motion.button
               onClick={() => setIsSocialOpen(!isSocialOpen)}
-              className="relative p-2 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white transition-all focus:outline-none shadow-md hover:shadow-lg"
+              className="relative p-2 rounded-full bg-linear-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white transition-all focus:outline-none shadow-md hover:shadow-lg"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
               aria-label="Social Links"
@@ -278,7 +316,7 @@ const NavbarOptimized = () => {
                     className="fixed inset-0 z-40"
                     onClick={closeDropdowns}
                   />
-                  
+
                   <motion.div
                     initial={{ opacity: 0, scale: 0.95, y: -10 }}
                     animate={{ opacity: 1, scale: 1, y: 0 }}
@@ -297,7 +335,10 @@ const NavbarOptimized = () => {
                           initial={{ opacity: 0, x: -20 }}
                           animate={{ opacity: 1, x: 0 }}
                           transition={{ delay: index * 0.05 }}
-                          whileHover={{ x: 5, backgroundColor: 'rgba(59, 130, 246, 0.1)' }}
+                          whileHover={{
+                            x: 5,
+                            backgroundColor: 'rgba(59, 130, 246, 0.1)',
+                          }}
                           onClick={closeDropdowns}
                         >
                           <social.icon className="w-5 h-5" />
@@ -363,7 +404,7 @@ const NavbarOptimized = () => {
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: index * 0.1 }}
-                  className="block px-4 py-3 text-base font-medium text-gray-600 dark:text-gray-300 hover:bg-gradient-to-r hover:from-blue-50 hover:to-purple-50 dark:hover:from-blue-900/20 dark:hover:to-purple-900/20 hover:text-blue-600 dark:hover:text-blue-400 rounded-lg transition-all"
+                  className="block px-4 py-3 text-base font-medium text-gray-600 dark:text-gray-300 hover:bg-linear-to-r hover:from-blue-50 hover:to-purple-50 dark:hover:from-blue-900/20 dark:hover:to-purple-900/20 hover:text-blue-600 dark:hover:text-blue-400 rounded-lg transition-all"
                   onClick={() => setIsMenuOpen(false)}
                   whileHover={{ x: 5 }}
                 >
