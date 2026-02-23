@@ -44,7 +44,7 @@ const AnimatedButton = ({
 
       {/* Shine Effect */}
       <motion.div
-        className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full"
+        className="absolute inset-0 bg-linear-to-r from-transparent via-white/30 to-transparent -translate-x-full"
         whileHover={{ translateX: '200%' }}
         transition={{ duration: 0.6 }}
       />

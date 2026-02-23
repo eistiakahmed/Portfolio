@@ -125,7 +125,7 @@ const Hero = () => {
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ delay: 0.8, type: 'spring' }}
                 >
-                  10+
+                  8+
                 </motion.p>
                 <p className="text-sm text-gray-500 dark:text-gray-400">
                   Projects
@@ -142,10 +142,27 @@ const Hero = () => {
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ delay: 1, type: 'spring' }}
                 >
-                  5+
+                  20+
                 </motion.p>
                 <p className="text-sm text-gray-500 dark:text-gray-400">
                   Technologies
+                </p>
+              </motion.div>
+              <motion.div
+                className="text-center sm:text-left"
+                whileHover={{ scale: 1.05 }}
+                transition={{ type: 'spring', stiffness: 300 }}
+              >
+                <motion.p
+                  className="text-4xl font-bold bg-linear-to-r from-pink-600 to-orange-600 text-transparent bg-clip-text"
+                  initial={{ opacity: 0, scale: 0 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ delay: 1.2, type: 'spring' }}
+                >
+                  2+
+                </motion.p>
+                <p className="text-sm text-gray-500 dark:text-gray-400">
+                  Certificates
                 </p>
               </motion.div>
             </motion.div>

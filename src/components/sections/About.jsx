@@ -1,9 +1,6 @@
 import React from 'react';
-import { Smartphone, Monitor, Database, GraduationCap } from 'lucide-react';
+import { Smartphone, Monitor, Database, GraduationCap, Code, Zap, Award, Target, Github, Linkedin, Mail } from 'lucide-react';
 import { motion } from 'framer-motion';
-import githubLogo from '../../assets/github.png';
-import linkedinLogo from '../../assets/linkedin.png';
-import gmailLogo from '../../assets/gmail.png';
 
 const About = () => {
   return (
@@ -46,43 +43,61 @@ const About = () => {
                     <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
                   </span>
                   <p className="text-green-500 text-sm font-medium leading-normal">
-                    Available
+                    Available for Work
                   </p>
                 </div>
 
+                {/* Quick Stats */}
+                <div className="grid grid-cols-3 gap-2 py-4 border-y border-gray-200 dark:border-gray-700">
+                  <div className="text-center">
+                    <p className="text-2xl font-bold text-blue-600 dark:text-blue-400">8+</p>
+                    <p className="text-xs text-gray-500 dark:text-gray-400">Projects</p>
+                  </div>
+                  <div className="text-center">
+                    <p className="text-2xl font-bold text-purple-600 dark:text-purple-400">20+</p>
+                    <p className="text-xs text-gray-500 dark:text-gray-400">Technologies</p>
+                  </div>
+                  <div className="text-center">
+                    <p className="text-2xl font-bold text-pink-600 dark:text-pink-400">2+</p>
+                    <p className="text-xs text-gray-500 dark:text-gray-400">Certificates</p>
+                  </div>
+                </div>
+
                 {/* Social Links */}
-                <div className="flex  justify-center">
+                <div className="flex justify-center gap-2">
                   {/* GitHub */}
-                  <a
+                  <motion.a
                     href="https://github.com/eistiakahmed"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-3 px-3 py-2 rounded-lg bg-primary/10 text-primary hover:bg-primary/20 transition-colors"
+                    className="flex items-center justify-center w-12 h-12 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-900 hover:text-white dark:hover:bg-white dark:hover:text-gray-900 transition-all duration-300"
+                    whileHover={{ scale: 1.1, rotate: 5 }}
+                    whileTap={{ scale: 0.95 }}
                   >
-                    <img src={githubLogo} alt="github" className="w-10 h-10" />
-                  </a>
+                    <Github className="w-6 h-6" />
+                  </motion.a>
 
                   {/* LinkedIn */}
-                  <a
+                  <motion.a
                     href="https://www.linkedin.com/in/eistiak-ahmed/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-3 px-3 py-2 rounded-lg text-gray-600 dark:text-slate-300 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+                    className="flex items-center justify-center w-12 h-12 rounded-lg bg-blue-50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400 hover:bg-blue-600 hover:text-white dark:hover:bg-blue-500 transition-all duration-300"
+                    whileHover={{ scale: 1.1, rotate: -5 }}
+                    whileTap={{ scale: 0.95 }}
                   >
-                    <img
-                      src={linkedinLogo}
-                      alt="linkedin"
-                      className="w-10 h-10"
-                    />
-                  </a>
+                    <Linkedin className="w-6 h-6" />
+                  </motion.a>
 
                   {/* Email */}
-                  <a
+                  <motion.a
                     href="mailto:eistiakahmedmeraj@gmail.com"
-                    className="flex items-center gap-3 px-3 py-2 rounded-lg text-gray-600 dark:text-slate-300 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+                    className="flex items-center justify-center w-12 h-12 rounded-lg bg-red-50 dark:bg-red-900/20 text-red-600 dark:text-red-400 hover:bg-red-600 hover:text-white dark:hover:bg-red-500 transition-all duration-300"
+                    whileHover={{ scale: 1.1, rotate: 5 }}
+                    whileTap={{ scale: 0.95 }}
                   >
-                    <img src={gmailLogo} alt="gmail" className="w-10 h-10" />
-                  </a>
+                    <Mail className="w-6 h-6" />
+                  </motion.a>
                 </div>
               </div>
             </motion.div>
@@ -102,17 +117,11 @@ const About = () => {
                 <h2 className="text-gray-900 dark:text-white text-xl font-bold leading-tight tracking-tight mb-4">
                   About Me
                 </h2>
+                <p className="text-gray-600 dark:text-slate-300 text-base font-normal leading-relaxed mb-4">
+                  Hi, I'm Eistiak Ahmed, a passionate Junior Frontend Developer specializing in building modern, responsive web applications. With expertise in the MERN stack (MongoDB, Express.js, React.js, Node.js), I transform complex ideas into elegant, user-friendly digital experiences.
+                </p>
                 <p className="text-gray-600 dark:text-slate-300 text-base font-normal leading-relaxed">
-                  Hi, I’m Eistiak Ahmed, a Junior Frontend Developer who loves
-                  transforming ideas into interactive, user-friendly web
-                  experiences. I thrive on turning complex challenges into
-                  clean, responsive designs that delight users. With experience
-                  building React.js, Next.js, Node.js, and MongoDB applications,
-                  I enjoy every step of the process—from brainstorming and
-                  designing to coding and deploying. I believe in creativity,
-                  precision, and continuous learning, and I’m always excited to
-                  craft web experiences that are as functional as they are
-                  beautiful.
+                  I've successfully delivered 8+ full-stack and frontend projects, mastered 20+ technologies, and earned certifications including Complete Web Development and the prestigious Black Belt Award. I thrive on solving challenging problems, writing clean and maintainable code, and continuously learning new technologies to stay at the forefront of web development.
                 </p>
               </motion.div>
 
@@ -132,10 +141,10 @@ const About = () => {
                     <Smartphone className="w-5 h-5 text-primary mt-1" />
                     <div className="flex flex-col">
                       <h4 className="text-gray-900 dark:text-white font-medium">
-                        Responsive UIs
+                        Responsive Web Design
                       </h4>
                       <p className="text-gray-500 dark:text-slate-400 text-sm">
-                        Crafting layouts that work seamlessly on any device.
+                        Crafting pixel-perfect, mobile-first layouts that work seamlessly across all devices.
                       </p>
                     </div>
                   </div>
@@ -143,11 +152,10 @@ const About = () => {
                     <Monitor className="w-5 h-5 text-primary mt-1" />
                     <div className="flex flex-col">
                       <h4 className="text-gray-900 dark:text-white font-medium">
-                        React Development
+                        React & Next.js Development
                       </h4>
                       <p className="text-gray-500 dark:text-slate-400 text-sm">
-                        Building dynamic interfaces with modern JavaScript
-                        frameworks.
+                        Building dynamic, high-performance SPAs with modern JavaScript frameworks.
                       </p>
                     </div>
                   </div>
@@ -155,13 +163,68 @@ const About = () => {
                     <Database className="w-5 h-5 text-primary mt-1" />
                     <div className="flex flex-col">
                       <h4 className="text-gray-900 dark:text-white font-medium">
-                        State Management
+                        Full-Stack Development
                       </h4>
                       <p className="text-gray-500 dark:text-slate-400 text-sm">
-                        Managing complex application state for predictable
-                        behavior.
+                        Creating end-to-end solutions with Node.js, Express.js, and MongoDB.
                       </p>
                     </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <Code className="w-5 h-5 text-primary mt-1" />
+                    <div className="flex flex-col">
+                      <h4 className="text-gray-900 dark:text-white font-medium">
+                        API Integration
+                      </h4>
+                      <p className="text-gray-500 dark:text-slate-400 text-sm">
+                        Seamlessly connecting frontends with RESTful APIs and authentication systems.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+
+              {/* Key Strengths Card */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.25 }}
+                className="bg-white dark:bg-[#191d31] p-6 rounded-xl shadow-lg border border-gray-200 dark:border-gray-800"
+              >
+                <h3 className="text-gray-900 dark:text-white text-lg font-bold leading-tight tracking-tight mb-4">
+                  Key Strengths
+                </h3>
+                <div className="flex flex-col gap-3">
+                  <div className="flex items-center gap-2">
+                    <Zap className="w-4 h-4 text-yellow-500" />
+                    <span className="text-gray-600 dark:text-slate-300 text-sm">
+                      Fast learner & problem solver
+                    </span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <Award className="w-4 h-4 text-blue-500" />
+                    <span className="text-gray-600 dark:text-slate-300 text-sm">
+                      Daily consistency & discipline
+                    </span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <Target className="w-4 h-4 text-green-500" />
+                    <span className="text-gray-600 dark:text-slate-300 text-sm">
+                      Goal-oriented & detail-focused
+                    </span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <Monitor className="w-4 h-4 text-purple-500" />
+                    <span className="text-gray-600 dark:text-slate-300 text-sm">
+                      Strong communication skills
+                    </span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <Code className="w-4 h-4 text-pink-500" />
+                    <span className="text-gray-600 dark:text-slate-300 text-sm">
+                      Clean code advocate
+                    </span>
                   </div>
                 </div>
               </motion.div>
@@ -177,9 +240,25 @@ const About = () => {
                 <h3 className="text-gray-900 dark:text-white text-lg font-bold leading-tight tracking-tight mb-4">
                   Education
                 </h3>
-                <div className="flex items-start gap-4">
+                <div className="flex items-start gap-4 mb-4">
                   <div className="p-2 bg-primary/10 rounded-lg mt-1">
                     <GraduationCap className="w-6 h-6 text-primary" />
+                  </div>
+                  <div className="flex flex-col">
+                    <h4 className="text-gray-900 dark:text-white font-semibold">
+                      Complete Web Development
+                    </h4>
+                    <p className="text-gray-600 dark:text-slate-300">
+                      Programming Hero
+                    </p>
+                    <p className="text-gray-500 dark:text-slate-400 text-sm">
+                      MERN Stack Specialization
+                    </p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-4">
+                  <div className="p-2 bg-blue-100 dark:bg-blue-900/30 rounded-lg mt-1">
+                    <GraduationCap className="w-6 h-6 text-blue-600 dark:text-blue-400" />
                   </div>
                   <div className="flex flex-col">
                     <h4 className="text-gray-900 dark:text-white font-semibold">
@@ -189,8 +268,56 @@ const About = () => {
                       BA in Islamic History and Culture
                     </p>
                     <p className="text-gray-500 dark:text-slate-400 text-sm">
-                      2024 -Present
+                      2024 - Present
                     </p>
+                  </div>
+                </div>
+              </motion.div>
+
+              {/* Achievements Card */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.35 }}
+                className="bg-white dark:bg-[#191d31] p-6 rounded-xl shadow-lg border border-gray-200 dark:border-gray-800"
+              >
+                <h3 className="text-gray-900 dark:text-white text-lg font-bold leading-tight tracking-tight mb-4">
+                  Achievements
+                </h3>
+                <div className="flex flex-col gap-3">
+                  <div className="flex items-start gap-3">
+                    <Award className="w-5 h-5 text-yellow-500 mt-0.5" />
+                    <div>
+                      <h4 className="text-gray-900 dark:text-white font-medium text-sm">
+                        Black Belt Award
+                      </h4>
+                      <p className="text-gray-500 dark:text-slate-400 text-xs">
+                        Programming Hero Job Placement Team
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <Target className="w-5 h-5 text-green-500 mt-0.5" />
+                    <div>
+                      <h4 className="text-gray-900 dark:text-white font-medium text-sm">
+                        8+ Projects Delivered
+                      </h4>
+                      <p className="text-gray-500 dark:text-slate-400 text-xs">
+                        Full-stack & Frontend applications
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <Code className="w-5 h-5 text-blue-500 mt-0.5" />
+                    <div>
+                      <h4 className="text-gray-900 dark:text-white font-medium text-sm">
+                        20+ Technologies Mastered
+                      </h4>
+                      <p className="text-gray-500 dark:text-slate-400 text-xs">
+                        Frontend, Backend & Tools
+                      </p>
+                    </div>
                   </div>
                 </div>
               </motion.div>
@@ -206,16 +333,27 @@ const About = () => {
                 <h3 className="text-gray-900 dark:text-white text-lg font-bold leading-tight tracking-tight mb-4">
                   My Goals
                 </h3>
-                <p className="text-gray-600 dark:text-slate-300 text-base font-normal leading-relaxed">
-                  My primary goal is to contribute to a collaborative team in
-                  building meaningful, impactful products. I’m eager to deepen
-                  my expertise in full-stack development, explore WebGL and
-                  other advanced technologies to create richer, more interactive
-                  user experiences, and continuously adopt best practices in
-                  performance, accessibility, and design. I aim to craft web
-                  applications that are not only functional and efficient but
-                  also delightful and inclusive for every user.
+                <p className="text-gray-600 dark:text-slate-300 text-base font-normal leading-relaxed mb-3">
+                  My primary goal is to contribute to a collaborative team in building meaningful, impactful products that solve real-world problems. I'm eager to:
                 </p>
+                <ul className="space-y-2 text-gray-600 dark:text-slate-300">
+                  <li className="flex items-start gap-2">
+                    <span className="text-primary mt-1">•</span>
+                    <span>Deepen my expertise in full-stack development and modern JavaScript frameworks</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-primary mt-1">•</span>
+                    <span>Explore advanced technologies like TypeScript, GraphQL, and cloud services</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-primary mt-1">•</span>
+                    <span>Master best practices in performance optimization, accessibility, and security</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-primary mt-1">•</span>
+                    <span>Build web applications that are functional, efficient, and delightful for every user</span>
+                  </li>
+                </ul>
               </motion.div>
             </div>
           </main>

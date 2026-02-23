@@ -6,154 +6,12 @@ import {
   FaChevronLeft,
   FaChevronRight,
 } from 'react-icons/fa';
-
-const projectsData = [
-  {
-    id: 1,
-    title: 'Digital Life Lessons',
-    category: 'Full Stack',
-    image:
-      'https://i.ibb.co/3Y8Z0ZCb/screencapture-digital-life-lessons-netlify-app-dashboard-admin-2025-12-23-19-43-05.png',
-    description:
-      'Digital Life Lessons is a full-stack (MERN) web application that allows users to share real-life experiences as meaningful lessons. Users can explore content using search, filters, and pagination, and engage through likes, comments, and favorites. The platform includes role-based access (Admin, Free & Premium users) with secure Stripe payment integration, focusing on community learning and personal growth.',
-    techStack: [
-      'React.js',
-      'Vite',
-      'Tailwind CSS',
-      'DaisyUI',
-      'Framer Motion',
-      'React Router',
-      'Firebase Authentication',
-      'Node.js',
-      'Express.js',
-      'MongoDB',
-      'Stripe Payment',
-    ],
-    liveLink: 'https://digital-life-lessons.netlify.app/',
-    gitHubClient:
-      'https://github.com/eistiakahmed/Digital_Life_Lessons_Frontend.git',
-    gitHubServer:
-      'https://github.com/eistiakahmed/Digital_Life_Lessons_Backend.git',
-  },
-  {
-    id: 2,
-    title: 'Warm Paws - Pet Care in Winter',
-    category: 'Frontend',
-    image: 'https://i.ibb.co.com/mVS4gGn1/Screenshot-2025-12-06-024811.png',
-    description:
-      'Warm Paws is a winter-themed pet care platform built to help pet owners provide better care during cold seasons.It offers essential services such as Clothing, Comfort, Grooming, Health, Wellness, and Outdoor Care, ensuring pets stay warm, safe, and healthy.',
-    techStack: [
-      'React.js',
-      'Tailwind CSS',
-      'React Router',
-      'Axios',
-      'Firebase',
-      'AOS',
-    ],
-    liveLink: 'https://warmpaws-winter.netlify.app/',
-    gitHubRepo: 'https://github.com/eistiakahmed/Warm-Paws.git',
-  },
-  {
-    id: 3,
-    title: 'Fureverly',
-    category: 'Full Stack',
-    image: 'https://i.ibb.co.com/v6qDXWXX/Screenshot-2025-12-06-030605.png',
-    description:
-      'Fureverly is a full-featured pet product management system built with the MERN stack.Users and admins can manage products, handle orders, and export order details as PDF.The platform features a clean UI, theme switch, smooth animations, and a responsive experience.',
-    techStack: [
-      'React.js',
-      'Firebase Auth',
-      'Tailwind CSS',
-      'DaisyUI',
-      'Vite',
-      'React Router',
-      'Node.js',
-      'Express.js',
-      'MongoDB',
-      'Farmer Motion',
-    ],
-    liveLink: 'https://fureverly.netlify.app/',
-    gitHubClient: 'https://github.com/eistiakahmed/Fureverly-Client.git',
-    gitHubServer: 'https://github.com/eistiakahmed/Fureverly-Server.git',
-  },
-  {
-    id: 4,
-    title: 'Hero.IO',
-    category: 'Frontend',
-    image: 'https://i.ibb.co.com/svcKpBzB/Screenshot-2025-12-06-031256.png',
-    description:
-      'Hero IO is a modern and intuitive platform designed for discovering, downloading, and managing apps with ease. Built with a sleek UI and smooth user experience, it offers trending app suggestions, app details, installation management, and seamless navigation across pages.',
-    techStack: [
-      'React.js, React Router, Tailwind CSS',
-      'DaisyUI',
-      'Recharts',
-      'Axios',
-      'React Icons',
-      'React Toastify',
-    ],
-    liveLink: 'https://hero-oi-application.netlify.app/',
-    gitHubRepo: 'https://github.com/eistiakahmed/Hero-IO.git',
-  },
-  {
-    id: 5,
-    title: 'BongoCart',
-    category: 'Full Stack',
-    image: 'https://i.ibb.co.com/jkMSVMCM/Screenshot-2025-12-06-032224.png',
-    description:
-      'BongoCart is a lightweight e-commerce prototype built with Next.js, where users can browse a collection of clothing products. After logging in, users can add new products, view detailed information, update or delete their own products, and manage all items they’ve posted.',
-    techStack: [
-      'Next.js',
-      'React.js, Tailwind CSS',
-      'DaisyUI',
-      'Firebase',
-      'Axios',
-      'React Icons',
-      'React Toastify',
-    ],
-    liveLink: 'https://bongo-cart-bd.vercel.app/',
-    gitHubClient: 'https://github.com/eistiakahmed/bongo-cart.git',
-    gitHubServer: 'https://github.com/eistiakahmed/bongo-cart-backend.git',
-  },
-  {
-    id: 6,
-    title: 'Taxi Kitchen',
-    category: 'Frontend',
-    image: 'https://i.ibb.co.com/N2cpbTqg/Screenshot-2025-12-06-032938.png',
-    description:
-      'Designed an interactive kitchen dashboard where staff can mark orders as Cooked and ready to serve, improving order visibility and efficiency.Designed an interactive kitchen dashboard where staff can mark orders as Cooked and ready to serve, improving order visibility and efficiency',
-    techStack: [
-      'React.js, Tailwind CSS',
-      'DaisyUI',
-      'Axios',
-      'React Icons',
-      'React Spinners',
-      'React Toastify',
-    ],
-    liveLink: 'https://taxi-kitchen-hub.netlify.app/',
-    gitHubRepo: 'https://github.com/eistiakahmed/taxi-kitchen.git',
-  },
-  {
-    id: 7,
-    title: 'Emergency Service Directory',
-    category: 'Frontend',
-    image: 'https://i.ibb.co.com/zVdNB1Rk/Screenshot-2025-12-06-035110.png',
-    description:
-      'Emergency Service Directory is a platform that provides access to a wide range of hotline numbers. With just one click, you can copy any number to your clipboard. The website also keeps track of your call history, showing which numbers you have called.',
-    techStack: [
-      'React.js, Tailwind CSS',
-      'DaisyUI',
-      'Axios',
-      'React Icons',
-      'React Spinners',
-      'React Toastify',
-    ],
-    liveLink: 'https://emergency-service-directory-bd.netlify.app/',
-  },
-];
+import useProjects from '../../hooks/useProjects';
 
 const Projects = () => {
   const [filter, setFilter] = useState('All');
   const [currentIndex, setCurrentIndex] = useState(0);
+  const { projects: projectsData, loading, error, isFromAPI } = useProjects();
 
   const filteredProjects =
     filter === 'All'
@@ -175,11 +33,43 @@ const Projects = () => {
     setCurrentIndex(0);
   }, [filter]);
 
+  // Loading state
+  if (loading) {
+    return (
+      <section
+        id="projects"
+        className="w-full min-h-screen p-4 sm:p-8 flex items-center justify-center bg-white dark:bg-black"
+      >
+        <div className="text-center">
+          <motion.div
+            className="w-16 h-16 border-4 border-blue-600 border-t-transparent rounded-full mx-auto mb-4"
+            animate={{ rotate: 360 }}
+            transition={{ duration: 1, repeat: Infinity, ease: 'linear' }}
+          />
+          <p className="text-gray-600 dark:text-gray-400">Loading projects...</p>
+        </div>
+      </section>
+    );
+  }
+
+  // Empty state
+  if (!filteredProjects.length) {
+    return (
+      <section
+        id="projects"
+        className="w-full min-h-screen p-4 sm:p-8 flex items-center justify-center bg-white dark:bg-black"
+      >
+        <div className="text-center">
+          <p className="text-gray-600 dark:text-gray-400">No projects found</p>
+        </div>
+      </section>
+    );
+  }
+
   return (
     <section
       id="projects"
-      className="w-full min-h-screen p-4 sm:p-8 flex items-center justify-center bg-white
- dark:bg-black"
+      className="w-full min-h-screen p-4 sm:p-8 flex items-center justify-center bg-white dark:bg-black"
     >
       <div className="max-w-7xl mx-auto w-full">
         <div className="mb-10">
@@ -189,6 +79,11 @@ const Projects = () => {
           <p className="mt-2 text-base text-gray-600 dark:text-gray-400">
             A showcase of my recent work and side projects
           </p>
+          {!isFromAPI && (
+            <p className="text-sm text-yellow-600 dark:text-yellow-400 mt-2">
+              ⚠️ Showing cached data (API unavailable)
+            </p>
+          )}
         </div>
 
         {/* Filter Buttons */}

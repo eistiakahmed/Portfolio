@@ -32,7 +32,7 @@ const NavbarOptimized = () => {
     setScrolled(scrollY > 20);
 
     // Optimized section detection
-    const sections = ['about', 'skills', 'projects', 'contact'];
+    const sections = ['about', 'skills', 'experience', 'projects', 'certificates', 'github', 'contact'];
     for (const section of sections) {
       const element = document.getElementById(section);
       if (element) {
@@ -93,7 +93,10 @@ const NavbarOptimized = () => {
   const navLinks = useMemo(() => [
     { name: 'About', href: '#about' },
     { name: 'Skills', href: '#skills' },
+    { name: 'Experience', href: '#experience' },
     { name: 'Projects', href: '#projects' },
+    { name: 'Certificates', href: '#certificates' },
+    { name: 'GitHub', href: '#github' },
     { name: 'Contact', href: '#contact' },
   ], []);
 

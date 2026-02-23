@@ -9,7 +9,9 @@ import useDarkMode from './hooks/useDarkMode';
 // Lazy load components for better performance
 const About = lazy(() => import('./components/sections/About'));
 const Skills = lazy(() => import('./components/sections/Skills'));
+const Experience = lazy(() => import('./components/sections/Experience'));
 const ProjectsEnhanced = lazy(() => import('./components/sections/ProjectsEnhanced'));
+const Certificates = lazy(() => import('./components/sections/Certificates'));
 const Languages = lazy(() => import('./components/sections/Languages'));
 const ContactEnhanced = lazy(() => import('./components/sections/ContactEnhanced'));
 const CustomCursor = lazy(() => import('./components/ui/CustomCursor'));
@@ -35,17 +37,6 @@ function App() {
   useEffect(() => {
     // Smooth scroll behavior
     document.documentElement.style.scrollBehavior = 'smooth';
-    
-    // Preload critical images
-    const preloadImages = [
-      'https://i.ibb.co/3Y8Z0ZCb/screencapture-digital-life-lessons-netlify-app-dashboard-admin-2025-12-23-19-43-05.png',
-      'https://i.ibb.co.com/mVS4gGn1/Screenshot-2025-12-06-024811.png'
-    ];
-    
-    preloadImages.forEach(src => {
-      const img = new Image();
-      img.src = src;
-    });
   }, []);
 
   return (
@@ -75,8 +66,18 @@ function App() {
             </Suspense>
             
             <Suspense fallback={<SectionLoader />}>
+              <Experience />
+            </Suspense>
+            
+            <Suspense fallback={<SectionLoader />}>
               <ProjectsEnhanced />
             </Suspense>
+            
+            <Suspense fallback={<SectionLoader />}>
+              <Certificates />
+            </Suspense>
+            
+            
             
             <Suspense fallback={<SectionLoader />}>
               <Languages />
