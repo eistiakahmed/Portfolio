@@ -1,4 +1,4 @@
-# 🎨 Interactive Portfolio - Project Summary
+#  Interactive Portfolio - Project Summary
 
 ## What Has Been Built
 
@@ -6,7 +6,7 @@ You now have a **production-ready, highly interactive React portfolio** with smo
 
 ---
 
-## 📦 Components Created (15 Total)
+##  Components Created (15 Total)
 
 ### Core UI Components (9)
 1. **CustomCursor.jsx** - Smooth custom cursor with hover detection
